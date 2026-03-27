@@ -1,0 +1,240 @@
+{
+  "@@locale": "zh",
+  "appTitle": "Theia",
+  "appTagline": "Edge AI Morphometrics.\n移动表型 AI 工作流。离线、在设备上且可及的分析。",
+  "themeMenuTooltip": "选择主题",
+  "themeSystem": "跟随系统",
+  "themeLight": "浅色模式",
+  "themeDark": "深色模式",
+  "themeLabel": "主题",
+  "languageMenuTooltip": "选择语言",
+  "languageSystem": "使用系统语言",
+  "languageLabel": "语言",
+  "uiScaleTitle": "界面大小",
+  "uiScaleHint": "文字和按钮",
+  "uiScaleSubtitle": "{percent}% - {hint}",
+  "@uiScaleSubtitle": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "hint": {}
+    }
+  },
+  "uiScaleReset": "重置",
+  "uiScaleClose": "关闭",
+  "homeLiveButton": "实时模式（相机）",
+  "homeBatchButton": "批处理模式（图库）",
+  "homeDataManagerButton": "数据与分析管理器",
+  "splashTitle": "Theia",
+  "batchTitle": "批处理模式",
+  "btnApplyAi": "应用 AI",
+  "btnAddGallery": "从图库添加",
+  "btnReplaceList": "替换列表",
+  "imagesLoaded": "已加载图片：{count}",
+  "@imagesLoaded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "btnClearList": "清空列表",
+  "sortBy": "排序依据:",
+  "sortOriginal": "原始顺序",
+  "sortRejectedFirst": "先显示拒绝",
+  "sortEditedFirst": "先显示已编辑",
+  "exportResults": "导出（{count}）个结果",
+  "@exportResults": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noExportable": "没有可导出的已批准或已编辑结果。",
+  "exportSuccess": "成功！'{fileName}' 已创建，包含 {count} 个样本。",
+  "@exportSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "processingComplete": "处理在 {time} 内完成。已处理 {count} 张图片。",
+  "@processingComplete": {
+    "placeholders": {
+      "time": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "stopProcess": "停止处理",
+  "filterStructural": "结构过滤器",
+  "filterStructuralOn": "开启（验证位置）",
+  "filterStructuralOff": "关闭（全部通过）",
+  "detectionLowConfidence": "检测置信度低。",
+  "rejectionPoints": "不一致的点：{points}",
+  "@rejectionPoints": {
+    "placeholders": {
+      "points": {}
+    }
+  },
+  "liveTitle": "实时模式",
+  "liveBatchCount": "批次：{count} 个样本",
+  "@liveBatchCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackAddBatch": "样本已添加。总计：{count}",
+  "@snackAddBatch": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackRejectedNotAdded": "已拒绝：{reason}。未添加。",
+  "@snackRejectedNotAdded": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "snackDiscarded": "结果已丢弃。",
+  "readyNewCapture": "准备好新的拍摄。",
+  "errorDuringAnalysis": "分析错误：{error}",
+  "@errorDuringAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "noSpecimensToExport": "批次中没有可导出的样本。",
+  "exportLiveSuccess": "成功！'{fileName}' 已创建，包含 {count} 个样本。",
+  "@exportLiveSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "exportLiveError": "导出错误：{error}",
+  "@exportLiveError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "btnDiscard": "丢弃",
+  "btnAccept": "接受",
+  "btnEdit": "编辑",
+  "btnRetake": "重新拍摄",
+  "btnExportBatch": "导出批次",
+  "resultRejectedPrefix": "已拒绝:",
+  "resultLabel": "结果",
+  "statusApproved": "已批准",
+  "statusRejected": "已拒绝",
+  "statusEdited": "已编辑",
+  "detailMovingPoint": "移动第 {index} 点",
+  "@detailMovingPoint": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "detailEditor": "编辑器",
+  "detailSaveTooltip": "保存更改",
+  "detailSaveSuccess": "更改已保存。",
+  "detailRejectedBanner": "已拒绝：{reason}",
+  "@detailRejectedBanner": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "detailPrevPoint": "上一个点",
+  "detailNextPoint": "下一个点",
+  "detailPrevImage": "上一张图片",
+  "detailNextImage": "下一张图片",
+  "dmTitle": "数据管理器",
+  "dmLandmarkFiles": "特征点文件（输入）",
+  "dmAnalysisFiles": "分析文件（结果）",
+  "dmNoFiles": "未找到文件。",
+  "dmDeleteConfirmTitle": "确认删除",
+  "dmDeleteConfirmContent": "删除文件 \"{file}\"？",
+  "@dmDeleteConfirmContent": {
+    "placeholders": {
+      "file": {}
+    }
+  },
+  "dmDeleteCancel": "取消",
+  "dmDeleteConfirm": "删除",
+  "dmDeleteSuccess": "文件已删除",
+  "dmDeleteError": "删除出错：{error}",
+  "@dmDeleteError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmAnalyzeButton": "分析特征点文件",
+  "dmErrorAnalysis": "分析错误：{error}",
+  "@dmErrorAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmCsvEmpty": "CSV 为空或只有表头。",
+  "dmNeedThree": "至少需要 3 个有效样本。",
+  "cameraLoadError": "无法加载相机。",
+  "drawerInfo": "信息",
+  "drawerInfoSubtitle": "模型详情和致谢",
+  "infoPageTitle": "信息",
+  "infoModelSection": "使用中的模型",
+  "infoThanksSection": "致谢",
+  "infoPlaceholder": "我们很快会添加模型详情和鸣谢。",
+  "appTaglineShort": "Edge AI Morphometrics",
+  "shareExport": "分享 / 导出",
+  "homeEcoFieldButton": "Eco-Field 模式",
+  "homeEcoFieldLockedMessage": "请先在设置中启用 Eco-Field Mode。",
+  "ecoFieldSettingsTitle": "Eco-Field Mode",
+  "ecoFieldSettingsSubtitleEnabled": "已启用用于野外采集",
+  "ecoFieldSettingsSubtitleDisabled": "未启用。请在设置中开启后从首页使用。",
+  "ecoFieldLocationDeniedNotice": "定位权限被拒绝。将继续拍摄但 GPS 为空。",
+  "ecoFieldTitle": "Eco-Field Mode",
+  "ecoFieldSessionPromptTitle": "新建野外会话",
+  "ecoFieldBatchLabel": "Batch / 种群",
+  "ecoFieldBatchHint": "例如：north_population_01",
+  "ecoFieldBatchRequired": "请输入 batch 名称。",
+  "ecoFieldOutputModeLabel": "输出模式",
+  "ecoFieldOutputModeAiCrop": "IA-Crop（优化）",
+  "ecoFieldOutputModeFullFrame": "Full-Frame（原图）",
+  "ecoFieldBlurFilterLabel": "模糊过滤（拉普拉斯）",
+  "ecoFieldStartSession": "开始会话",
+  "ecoFieldCancelSession": "取消",
+  "ecoFieldSessionReady": "会话已就绪：{session}",
+  "ecoFieldAiConfidenceNA": "NA",
+  "ecoFieldCaptureSaved": "已保存：{imageName}",
+  "ecoFieldCaptureSaveError": "保存拍摄失败：{error}",
+  "ecoFieldCaptureRejectedNoDetection": "未以足够置信度检测到花朵。",
+  "ecoFieldCaptureRejectedBlur": "图像模糊，已丢弃。",
+  "ecoFieldCaptureRejectedCrop": "无法生成 IA 裁剪图。",
+  "@ecoFieldSessionReady": {
+    "placeholders": {
+      "session": {}
+    }
+  },
+  "@ecoFieldCaptureSaved": {
+    "placeholders": {
+      "imageName": {}
+    }
+  },
+  "@ecoFieldCaptureSaveError": {
+    "placeholders": {
+      "error": {}
+    }
+  }
+}

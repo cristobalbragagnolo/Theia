@@ -1,0 +1,51 @@
+name: theia
+description: "A new Flutter project."
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' # Rango de SDK compatible
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  path: ^1.9.0
+  vector_math: ^2.1.4
+  # --- Dependencias funcionales y compatibles ---
+  image_picker: ^1.1.2
+  camera: ^0.11.1
+  share_plus: ^9.0.0
+  path_provider: ^2.1.3
+  http: ^1.2.1
+  csv: ^5.1.1 # (Estaba en ^6.0.0)
+  fl_chart: ^0.68.0
+  intl: ^0.20.2
+
+
+  ml_linalg: ^13.12.6
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/T.png"
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/detector_nano_fp32.tflite
+    - assets/pose_medium_fp32.tflite
+    # Si tienes una imagen de prueba en assets, déjala aquí. Si no, puedes borrar la línea.
+    # - assets/test_image.jpg 

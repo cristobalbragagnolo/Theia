@@ -1,0 +1,13 @@
+# THEIA - MEE Repository .gitignore
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+models_weights/
+*.pt
+*.tflite
+*.onnx
+*.zip
+theia_app/build/
+theia_app/.dart_tool/
+android/.gradle/
+.DS_Store

@@ -1,0 +1,241 @@
+{
+  "@@locale": "es",
+  "appTitle": "Theia",
+  "appTagline": "Edge AI Morphometrics.\nFlujo fenotípico de IA móvil. Análisis sin conexión, en el dispositivo y accesible.",
+  "themeMenuTooltip": "Seleccionar tema",
+  "themeSystem": "Seguir sistema",
+  "themeLight": "Modo claro",
+  "themeDark": "Modo oscuro",
+  "themeLabel": "Tema",
+  "languageMenuTooltip": "Seleccionar idioma",
+  "languageSystem": "Usar idioma del sistema",
+  "languageLabel": "Idioma",
+  "uiScaleTitle": "Tamaño de interfaz",
+  "uiScaleHint": "texto y botones",
+  "uiScaleSubtitle": "{percent}% - {hint}",
+  "@uiScaleSubtitle": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "hint": {}
+    }
+  },
+  "uiScaleReset": "Restablecer",
+  "uiScaleClose": "Cerrar",
+  "homeLiveButton": "Modo Live (Cámara)",
+  "homeBatchButton": "Modo Batch (Galería)",
+  "homeDataManagerButton": "Gestor de Datos y Análisis",
+  "splashTitle": "Theia",
+  "batchTitle": "Modo Batch",
+  "btnApplyAi": "Aplicar IA",
+  "btnAddGallery": "Agregar de la Galería",
+  "btnReplaceList": "Reemplazar Lista",
+  "imagesLoaded": "Imágenes cargadas: {count}",
+  "@imagesLoaded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "btnClearList": "Vaciar Lista",
+  "sortBy": "Ordenar por:",
+  "sortOriginal": "Orden original",
+  "sortRejectedFirst": "Rechazadas primero",
+  "sortEditedFirst": "Editadas primero",
+  "exportResults": "Exportar ({count}) Resultados",
+  "@exportResults": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noExportable": "No hay resultados aprobados o editados para exportar.",
+  "exportSuccess": "¡Éxito! Se creó '{fileName}' con {count} especímenes.",
+  "@exportSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "processingComplete": "Proceso completado en {time}. Se procesaron {count} imágenes.",
+  "@processingComplete": {
+    "placeholders": {
+      "time": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "stopProcess": "Detener Proceso",
+  "filterStructural": "Filtro estructural",
+  "filterStructuralOn": "Activado (valida posiciones)",
+  "filterStructuralOff": "Apagado (todas las predicciones pasan)",
+  "detectionLowConfidence": "Baja confianza de detección.",
+  "rejectionPoints": "Incoherencia punto(s): {points}",
+  "@rejectionPoints": {
+    "placeholders": {
+      "points": {}
+    }
+  },
+  "liveTitle": "Modo Live",
+  "liveBatchCount": "Lote: {count} especímenes",
+  "@liveBatchCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackAddBatch": "Espécimen añadido al lote. Total: {count}",
+  "@snackAddBatch": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackRejectedNotAdded": "Rechazado: {reason}. No se añadió.",
+  "@snackRejectedNotAdded": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "snackDiscarded": "Resultado descartado.",
+  "readyNewCapture": "Listo para una nueva captura.",
+  "errorDuringAnalysis": "Error durante el análisis: {error}",
+  "@errorDuringAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "noSpecimensToExport": "No hay especímenes en el lote para exportar.",
+  "exportLiveSuccess": "¡Éxito! Se creó '{fileName}' con {count} especímenes.",
+  "@exportLiveSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "exportLiveError": "Error al exportar: {error}",
+  "@exportLiveError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "btnDiscard": "Descartar",
+  "btnAccept": "Aceptar",
+  "btnEdit": "Editar",
+  "btnRetake": "Repetir",
+  "btnExportBatch": "Exportar Lote",
+  "resultRejectedPrefix": "RECHAZADO:",
+  "resultLabel": "Resultado",
+  "statusApproved": "Aprobada",
+  "statusRejected": "Rechazada",
+  "statusEdited": "Editada",
+  "detailMovingPoint": "Moviendo Punto {index}",
+  "@detailMovingPoint": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "detailEditor": "Editor",
+  "detailSaveTooltip": "Guardar Cambios",
+  "detailSaveSuccess": "Cambios guardados.",
+  "detailRejectedBanner": "Rechazado: {reason}",
+  "@detailRejectedBanner": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "detailPrevPoint": "Punto Anterior",
+  "detailNextPoint": "Punto Siguiente",
+  "detailPrevImage": "Imagen anterior",
+  "detailNextImage": "Siguiente imagen",
+  "dmTitle": "Gestor de Datos",
+  "dmLandmarkFiles": "Archivos de Landmarks (Entrada)",
+  "dmAnalysisFiles": "Archivos de Análisis (Resultados)",
+  "dmNoFiles": "No se encontraron archivos.",
+  "dmDeleteConfirmTitle": "Confirmar borrado",
+  "dmDeleteConfirmContent": "¿Quieres eliminar el archivo \"{file}\"?",
+  "@dmDeleteConfirmContent": {
+    "placeholders": {
+      "file": {}
+    }
+  },
+  "dmDeleteCancel": "Cancelar",
+  "dmDeleteConfirm": "Eliminar",
+  "dmDeleteSuccess": "Archivo eliminado",
+  "dmDeleteError": "Error al eliminar: {error}",
+  "@dmDeleteError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmAnalyzeButton": "Analizar archivo de landmarks",
+  "dmErrorAnalysis": "Error en el análisis: {error}",
+  "@dmErrorAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmCsvEmpty": "CSV vacío o solo cabecera.",
+  "dmNeedThree": "Se requieren al menos 3 especímenes válidos.",
+  "cameraLoadError": "Error al cargar la cámara.",
+  "drawerInfo": "Información",
+  "drawerInfoSubtitle": "Modelo en uso y agradecimientos",
+  "infoPageTitle": "Información",
+  "infoModelSection": "Modelo en uso",
+  "infoThanksSection": "Agradecimientos",
+  "infoPlaceholder": "Próximamente añadiremos detalles del modelo y créditos.",
+  "infoAcknowledgementsBody": "Los algoritmos de DeepLearning de esta aplicación, como la ciencia en general, están construidas sobre el trabajo que hicieron otras personas antes que nosotros. Por eso quiero agradecer a Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares y Andrés Ferreira Rodríguez por su trabajo en anotación y su gran apoyo.\n\nEsta app esta hecha con amor, curiosidad y mucho trabajo. Por lo cual quiero agradecerles a mis padres y mi familia que me inculcaron esos valores.\n\nEspero que esta herramienta sirva para la investigación científica y ayude a los que vienen luego a descubrir e inventar cosas aun mejores.",
+  "appTaglineShort": "Edge AI Morphometrics",
+  "shareExport": "Compartir / Exportar",
+  "homeEcoFieldButton": "Modo Eco-Field",
+  "homeEcoFieldLockedMessage": "Activa Eco-Field Mode en Ajustes para usarlo.",
+  "ecoFieldSettingsTitle": "Eco-Field Mode",
+  "ecoFieldSettingsSubtitleEnabled": "Activado para captura de campo",
+  "ecoFieldSettingsSubtitleDisabled": "Desactivado. Actívalo para usarlo desde Home.",
+  "ecoFieldLocationDeniedNotice": "Ubicación no concedida. Se capturará con GPS vacío.",
+  "ecoFieldTitle": "Eco-Field Mode",
+  "ecoFieldSessionPromptTitle": "Nueva sesión de campo",
+  "ecoFieldBatchLabel": "Batch / Población",
+  "ecoFieldBatchHint": "Ej.: poblacion_norte_01",
+  "ecoFieldBatchRequired": "Introduce un nombre de batch.",
+  "ecoFieldOutputModeLabel": "Modo de salida",
+  "ecoFieldOutputModeAiCrop": "IA-Crop (Optimizado)",
+  "ecoFieldOutputModeFullFrame": "Full-Frame (Original)",
+  "ecoFieldBlurFilterLabel": "Filtro de desenfoque (Laplaciana)",
+  "ecoFieldStartSession": "Iniciar sesión",
+  "ecoFieldCancelSession": "Cancelar",
+  "ecoFieldSessionReady": "Sesión lista: {session}",
+  "ecoFieldAiConfidenceNA": "NA",
+  "ecoFieldCaptureSaved": "Guardada: {imageName}",
+  "ecoFieldCaptureSaveError": "Error al guardar captura: {error}",
+  "ecoFieldCaptureRejectedNoDetection": "No se detectó flor con confianza suficiente.",
+  "ecoFieldCaptureRejectedBlur": "Captura descartada por desenfoque.",
+  "ecoFieldCaptureRejectedCrop": "No se pudo generar el recorte IA.",
+  "@ecoFieldSessionReady": {
+    "placeholders": {
+      "session": {}
+    }
+  },
+  "@ecoFieldCaptureSaved": {
+    "placeholders": {
+      "imageName": {}
+    }
+  },
+  "@ecoFieldCaptureSaveError": {
+    "placeholders": {
+      "error": {}
+    }
+  }
+}

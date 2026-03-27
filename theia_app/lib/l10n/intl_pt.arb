@@ -1,0 +1,240 @@
+{
+  "@@locale": "pt",
+  "appTitle": "Theia",
+  "appTagline": "Edge AI Morphometrics.\nFluxo de IA fenotípica móvel. Análise offline, no dispositivo e acessível.",
+  "themeMenuTooltip": "Escolher tema",
+  "themeSystem": "Seguir sistema",
+  "themeLight": "Modo claro",
+  "themeDark": "Modo escuro",
+  "themeLabel": "Tema",
+  "languageMenuTooltip": "Escolher idioma",
+  "languageSystem": "Usar idioma do sistema",
+  "languageLabel": "Idioma",
+  "uiScaleTitle": "Tamanho da interface",
+  "uiScaleHint": "texto e botões",
+  "uiScaleSubtitle": "{percent}% - {hint}",
+  "@uiScaleSubtitle": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "hint": {}
+    }
+  },
+  "uiScaleReset": "Restaurar",
+  "uiScaleClose": "Fechar",
+  "homeLiveButton": "Modo Live (Câmera)",
+  "homeBatchButton": "Modo Batch (Galeria)",
+  "homeDataManagerButton": "Gestor de Dados e Análises",
+  "splashTitle": "Theia",
+  "batchTitle": "Modo Batch",
+  "btnApplyAi": "Aplicar IA",
+  "btnAddGallery": "Adicionar da Galeria",
+  "btnReplaceList": "Substituir Lista",
+  "imagesLoaded": "Imagens carregadas: {count}",
+  "@imagesLoaded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "btnClearList": "Limpar Lista",
+  "sortBy": "Ordenar por:",
+  "sortOriginal": "Ordem original",
+  "sortRejectedFirst": "Rejeitadas primeiro",
+  "sortEditedFirst": "Editadas primeiro",
+  "exportResults": "Exportar ({count}) Resultados",
+  "@exportResults": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noExportable": "Não há resultados aprovados ou editados para exportar.",
+  "exportSuccess": "Sucesso! '{fileName}' criado com {count} espécimes.",
+  "@exportSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "processingComplete": "Processo finalizado em {time}. {count} imagens processadas.",
+  "@processingComplete": {
+    "placeholders": {
+      "time": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "stopProcess": "Parar processo",
+  "filterStructural": "Filtro estrutural",
+  "filterStructuralOn": "Ativado (valida posições)",
+  "filterStructuralOff": "Desligado (todas as previsões passam)",
+  "detectionLowConfidence": "Baixa confiança de detecção.",
+  "rejectionPoints": "Inconsistência no(s) ponto(s): {points}",
+  "@rejectionPoints": {
+    "placeholders": {
+      "points": {}
+    }
+  },
+  "liveTitle": "Modo Live",
+  "liveBatchCount": "Lote: {count} espécimes",
+  "@liveBatchCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackAddBatch": "Espécime adicionado ao lote. Total: {count}",
+  "@snackAddBatch": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackRejectedNotAdded": "Rejeitado: {reason}. Não adicionado.",
+  "@snackRejectedNotAdded": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "snackDiscarded": "Resultado descartado.",
+  "readyNewCapture": "Pronto para uma nova captura.",
+  "errorDuringAnalysis": "Erro durante a análise: {error}",
+  "@errorDuringAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "noSpecimensToExport": "Não há espécimes no lote para exportar.",
+  "exportLiveSuccess": "Sucesso! '{fileName}' criado com {count} espécimes.",
+  "@exportLiveSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "exportLiveError": "Erro ao exportar: {error}",
+  "@exportLiveError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "btnDiscard": "Descartar",
+  "btnAccept": "Aceitar",
+  "btnEdit": "Editar",
+  "btnRetake": "Repetir",
+  "btnExportBatch": "Exportar Lote",
+  "resultRejectedPrefix": "REJEITADO:",
+  "resultLabel": "Resultado",
+  "statusApproved": "Aprovada",
+  "statusRejected": "Rejeitada",
+  "statusEdited": "Editada",
+  "detailMovingPoint": "Movendo Ponto {index}",
+  "@detailMovingPoint": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "detailEditor": "Editor",
+  "detailSaveTooltip": "Salvar Alterações",
+  "detailSaveSuccess": "Alterações salvas.",
+  "detailRejectedBanner": "Rejeitado: {reason}",
+  "@detailRejectedBanner": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "detailPrevPoint": "Ponto Anterior",
+  "detailNextPoint": "Próximo Ponto",
+  "detailPrevImage": "Imagem anterior",
+  "detailNextImage": "Próxima imagem",
+  "dmTitle": "Gestor de Dados",
+  "dmLandmarkFiles": "Arquivos de Landmarks (Entrada)",
+  "dmAnalysisFiles": "Arquivos de Análises (Resultados)",
+  "dmNoFiles": "Nenhum arquivo encontrado.",
+  "dmDeleteConfirmTitle": "Confirmar exclusão",
+  "dmDeleteConfirmContent": "Deseja excluir o arquivo \"{file}\"?",
+  "@dmDeleteConfirmContent": {
+    "placeholders": {
+      "file": {}
+    }
+  },
+  "dmDeleteCancel": "Cancelar",
+  "dmDeleteConfirm": "Excluir",
+  "dmDeleteSuccess": "Arquivo excluído",
+  "dmDeleteError": "Erro ao excluir: {error}",
+  "@dmDeleteError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmAnalyzeButton": "Analisar arquivo de landmarks",
+  "dmErrorAnalysis": "Erro na análise: {error}",
+  "@dmErrorAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmCsvEmpty": "CSV vazio ou apenas cabeçalho.",
+  "dmNeedThree": "São necessários pelo menos 3 espécimes válidos.",
+  "cameraLoadError": "Erro ao carregar a câmera.",
+  "drawerInfo": "Informações",
+  "drawerInfoSubtitle": "Detalhes do modelo e agradecimentos",
+  "infoPageTitle": "Informações",
+  "infoModelSection": "Modelo em uso",
+  "infoThanksSection": "Agradecimentos",
+  "infoPlaceholder": "Em breve adicionaremos detalhes do modelo atual e créditos.",
+  "appTaglineShort": "Edge AI Morphometrics",
+  "shareExport": "Compartilhar / Exportar",
+  "homeEcoFieldButton": "Modo Eco-Field",
+  "homeEcoFieldLockedMessage": "Ative o Eco-Field Mode nas configurações para usar.",
+  "ecoFieldSettingsTitle": "Eco-Field Mode",
+  "ecoFieldSettingsSubtitleEnabled": "Ativado para captura em campo",
+  "ecoFieldSettingsSubtitleDisabled": "Desativado. Ative para usar na Home.",
+  "ecoFieldLocationDeniedNotice": "Localização negada. Capturas continuarão com GPS vazio.",
+  "ecoFieldTitle": "Eco-Field Mode",
+  "ecoFieldSessionPromptTitle": "Nova sessão de campo",
+  "ecoFieldBatchLabel": "Batch / População",
+  "ecoFieldBatchHint": "Ex.: populacao_norte_01",
+  "ecoFieldBatchRequired": "Informe um nome de batch.",
+  "ecoFieldOutputModeLabel": "Modo de saída",
+  "ecoFieldOutputModeAiCrop": "IA-Crop (Otimizado)",
+  "ecoFieldOutputModeFullFrame": "Full-Frame (Original)",
+  "ecoFieldBlurFilterLabel": "Filtro de desfoque (Laplaciano)",
+  "ecoFieldStartSession": "Iniciar sessão",
+  "ecoFieldCancelSession": "Cancelar",
+  "ecoFieldSessionReady": "Sessão pronta: {session}",
+  "ecoFieldAiConfidenceNA": "NA",
+  "ecoFieldCaptureSaved": "Salva: {imageName}",
+  "ecoFieldCaptureSaveError": "Erro ao salvar captura: {error}",
+  "ecoFieldCaptureRejectedNoDetection": "Flor não detectada com confiança suficiente.",
+  "ecoFieldCaptureRejectedBlur": "Captura descartada por desfoque.",
+  "ecoFieldCaptureRejectedCrop": "Não foi possível gerar o recorte IA.",
+  "@ecoFieldSessionReady": {
+    "placeholders": {
+      "session": {}
+    }
+  },
+  "@ecoFieldCaptureSaved": {
+    "placeholders": {
+      "imageName": {}
+    }
+  },
+  "@ecoFieldCaptureSaveError": {
+    "placeholders": {
+      "error": {}
+    }
+  }
+}

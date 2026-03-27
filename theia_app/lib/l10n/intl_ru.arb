@@ -1,0 +1,240 @@
+{
+  "@@locale": "ru",
+  "appTitle": "Theia",
+  "appTagline": "Edge AI Morphometrics.\nМобильный фенотипический AI-процесс. Аналитика офлайн, на устройстве и доступная.",
+  "themeMenuTooltip": "Выбрать тему",
+  "themeSystem": "Следовать системе",
+  "themeLight": "Светлая тема",
+  "themeDark": "Тёмная тема",
+  "themeLabel": "Тема",
+  "languageMenuTooltip": "Выбрать язык",
+  "languageSystem": "Использовать язык системы",
+  "languageLabel": "Язык",
+  "uiScaleTitle": "Размер интерфейса",
+  "uiScaleHint": "текст и кнопки",
+  "uiScaleSubtitle": "{percent}% - {hint}",
+  "@uiScaleSubtitle": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "hint": {}
+    }
+  },
+  "uiScaleReset": "Сбросить",
+  "uiScaleClose": "Закрыть",
+  "homeLiveButton": "Режим Live (камера)",
+  "homeBatchButton": "Пакетный режим (галерея)",
+  "homeDataManagerButton": "Менеджер данных и анализа",
+  "splashTitle": "Theia",
+  "batchTitle": "Пакетный режим",
+  "btnApplyAi": "Применить ИИ",
+  "btnAddGallery": "Добавить из галереи",
+  "btnReplaceList": "Заменить список",
+  "imagesLoaded": "Загружено изображений: {count}",
+  "@imagesLoaded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "btnClearList": "Очистить список",
+  "sortBy": "Сортировать по:",
+  "sortOriginal": "Исходный порядок",
+  "sortRejectedFirst": "Сначала отклонённые",
+  "sortEditedFirst": "Сначала отредактированные",
+  "exportResults": "Экспорт ({count}) результатов",
+  "@exportResults": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noExportable": "Нет одобренных или отредактированных результатов для экспорта.",
+  "exportSuccess": "Успех! '{fileName}' создан с {count} образцами.",
+  "@exportSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "processingComplete": "Процесс завершён за {time}. Обработано {count} изображений.",
+  "@processingComplete": {
+    "placeholders": {
+      "time": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "stopProcess": "Остановить процесс",
+  "filterStructural": "Структурный фильтр",
+  "filterStructuralOn": "Вкл. (проверка позиций)",
+  "filterStructuralOff": "Выкл. (все предсказания проходят)",
+  "detectionLowConfidence": "Низкая уверенность обнаружения.",
+  "rejectionPoints": "Несогласованные точки: {points}",
+  "@rejectionPoints": {
+    "placeholders": {
+      "points": {}
+    }
+  },
+  "liveTitle": "Live режим",
+  "liveBatchCount": "Партия: {count} образцов",
+  "@liveBatchCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackAddBatch": "Образец добавлен. Всего: {count}",
+  "@snackAddBatch": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackRejectedNotAdded": "Отклонено: {reason}. Не добавлено.",
+  "@snackRejectedNotAdded": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "snackDiscarded": "Результат удалён.",
+  "readyNewCapture": "Готово к новой съемке.",
+  "errorDuringAnalysis": "Ошибка анализа: {error}",
+  "@errorDuringAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "noSpecimensToExport": "Нет образцов для экспорта.",
+  "exportLiveSuccess": "Успех! '{fileName}' создан с {count} образцами.",
+  "@exportLiveSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "exportLiveError": "Ошибка экспорта: {error}",
+  "@exportLiveError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "btnDiscard": "Удалить",
+  "btnAccept": "Принять",
+  "btnEdit": "Редактировать",
+  "btnRetake": "Снять снова",
+  "btnExportBatch": "Экспорт партии",
+  "resultRejectedPrefix": "ОТКЛОНЕНО:",
+  "resultLabel": "Результат",
+  "statusApproved": "Одобрено",
+  "statusRejected": "Отклонено",
+  "statusEdited": "Отредактировано",
+  "detailMovingPoint": "Перемещение точки {index}",
+  "@detailMovingPoint": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "detailEditor": "Редактор",
+  "detailSaveTooltip": "Сохранить изменения",
+  "detailSaveSuccess": "Изменения сохранены.",
+  "detailRejectedBanner": "Отклонено: {reason}",
+  "@detailRejectedBanner": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "detailPrevPoint": "Предыдущая точка",
+  "detailNextPoint": "Следующая точка",
+  "detailPrevImage": "Предыдущее изображение",
+  "detailNextImage": "Следующее изображение",
+  "dmTitle": "Менеджер данных",
+  "dmLandmarkFiles": "Файлы ориентиров (вход)",
+  "dmAnalysisFiles": "Файлы анализа (результаты)",
+  "dmNoFiles": "Файлы не найдены.",
+  "dmDeleteConfirmTitle": "Подтвердить удаление",
+  "dmDeleteConfirmContent": "Удалить файл \"{file}\"?",
+  "@dmDeleteConfirmContent": {
+    "placeholders": {
+      "file": {}
+    }
+  },
+  "dmDeleteCancel": "Отмена",
+  "dmDeleteConfirm": "Удалить",
+  "dmDeleteSuccess": "Файл удалён",
+  "dmDeleteError": "Ошибка удаления: {error}",
+  "@dmDeleteError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmAnalyzeButton": "Анализировать файл ориентиров",
+  "dmErrorAnalysis": "Ошибка анализа: {error}",
+  "@dmErrorAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmCsvEmpty": "CSV пуст или только заголовок.",
+  "dmNeedThree": "Требуется минимум 3 действительных образца.",
+  "cameraLoadError": "Не удалось загрузить камеру.",
+  "drawerInfo": "Информация",
+  "drawerInfoSubtitle": "Детали модели и благодарности",
+  "infoPageTitle": "Информация",
+  "infoModelSection": "Используемая модель",
+  "infoThanksSection": "Благодарности",
+  "infoPlaceholder": "Скоро добавим детали модели и благодарности.",
+  "appTaglineShort": "Edge AI Morphometrics",
+  "shareExport": "Поделиться / Экспорт",
+  "homeEcoFieldButton": "Режим Eco-Field",
+  "homeEcoFieldLockedMessage": "Включите Eco-Field Mode в настройках.",
+  "ecoFieldSettingsTitle": "Eco-Field Mode",
+  "ecoFieldSettingsSubtitleEnabled": "Включен для полевого сбора",
+  "ecoFieldSettingsSubtitleDisabled": "Выключен. Включите в настройках для доступа с Home.",
+  "ecoFieldLocationDeniedNotice": "Доступ к геопозиции отклонен. Съемка продолжится с пустым GPS.",
+  "ecoFieldTitle": "Eco-Field Mode",
+  "ecoFieldSessionPromptTitle": "Новая полевая сессия",
+  "ecoFieldBatchLabel": "Batch / Популяция",
+  "ecoFieldBatchHint": "например, north_population_01",
+  "ecoFieldBatchRequired": "Введите имя batch.",
+  "ecoFieldOutputModeLabel": "Режим вывода",
+  "ecoFieldOutputModeAiCrop": "IA-Crop (Оптимизированный)",
+  "ecoFieldOutputModeFullFrame": "Full-Frame (Оригинал)",
+  "ecoFieldBlurFilterLabel": "Фильтр размытия (Лапласиан)",
+  "ecoFieldStartSession": "Начать сессию",
+  "ecoFieldCancelSession": "Отмена",
+  "ecoFieldSessionReady": "Сессия готова: {session}",
+  "ecoFieldAiConfidenceNA": "NA",
+  "ecoFieldCaptureSaved": "Сохранено: {imageName}",
+  "ecoFieldCaptureSaveError": "Ошибка сохранения: {error}",
+  "ecoFieldCaptureRejectedNoDetection": "Цветок не обнаружен с достаточной уверенностью.",
+  "ecoFieldCaptureRejectedBlur": "Снимок отклонен из-за размытия.",
+  "ecoFieldCaptureRejectedCrop": "Не удалось создать IA-crop.",
+  "@ecoFieldSessionReady": {
+    "placeholders": {
+      "session": {}
+    }
+  },
+  "@ecoFieldCaptureSaved": {
+    "placeholders": {
+      "imageName": {}
+    }
+  },
+  "@ecoFieldCaptureSaveError": {
+    "placeholders": {
+      "error": {}
+    }
+  }
+}

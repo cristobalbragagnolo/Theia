@@ -1,0 +1,240 @@
+{
+  "@@locale": "de",
+  "appTitle": "Theia",
+  "appTagline": "Edge AI Morphometrics.\nMobiler phänotypischer KI-Workflow. Analyse offline, auf dem Gerät und zugänglich.",
+  "themeMenuTooltip": "Thema wählen",
+  "themeSystem": "Systemvorgabe",
+  "themeLight": "Helles Design",
+  "themeDark": "Dunkles Design",
+  "themeLabel": "Thema",
+  "languageMenuTooltip": "Sprache wählen",
+  "languageSystem": "Systemsprache verwenden",
+  "languageLabel": "Sprache",
+  "uiScaleTitle": "Größe der Oberfläche",
+  "uiScaleHint": "Text und Schaltflächen",
+  "uiScaleSubtitle": "{percent}% - {hint}",
+  "@uiScaleSubtitle": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "hint": {}
+    }
+  },
+  "uiScaleReset": "Zurücksetzen",
+  "uiScaleClose": "Schließen",
+  "homeLiveButton": "Live-Modus (Kamera)",
+  "homeBatchButton": "Batch-Modus (Galerie)",
+  "homeDataManagerButton": "Daten- & Analyse-Manager",
+  "splashTitle": "Theia",
+  "batchTitle": "Batch-Modus",
+  "btnApplyAi": "KI anwenden",
+  "btnAddGallery": "Aus Galerie hinzufügen",
+  "btnReplaceList": "Liste ersetzen",
+  "imagesLoaded": "Bilder geladen: {count}",
+  "@imagesLoaded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "btnClearList": "Liste leeren",
+  "sortBy": "Sortieren nach:",
+  "sortOriginal": "Ursprüngliche Reihenfolge",
+  "sortRejectedFirst": "Abgelehnte zuerst",
+  "sortEditedFirst": "Bearbeitete zuerst",
+  "exportResults": "({count}) Ergebnisse exportieren",
+  "@exportResults": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noExportable": "Keine freigegebenen oder bearbeiteten Ergebnisse zum Export.",
+  "exportSuccess": "Erfolg! '{fileName}' erstellt mit {count} Exemplaren.",
+  "@exportSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "processingComplete": "Prozess in {time} abgeschlossen. {count} Bilder verarbeitet.",
+  "@processingComplete": {
+    "placeholders": {
+      "time": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "stopProcess": "Prozess stoppen",
+  "filterStructural": "Strukturfilter",
+  "filterStructuralOn": "An (Positionen validieren)",
+  "filterStructuralOff": "Aus (alle Vorhersagen zulassen)",
+  "detectionLowConfidence": "Geringe Erkennungssicherheit.",
+  "rejectionPoints": "Inkonsistente Punkte: {points}",
+  "@rejectionPoints": {
+    "placeholders": {
+      "points": {}
+    }
+  },
+  "liveTitle": "Live-Modus",
+  "liveBatchCount": "Satz: {count} Exemplare",
+  "@liveBatchCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackAddBatch": "Exemplar hinzugefügt. Gesamt: {count}",
+  "@snackAddBatch": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackRejectedNotAdded": "Abgelehnt: {reason}. Nicht hinzugefügt.",
+  "@snackRejectedNotAdded": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "snackDiscarded": "Ergebnis verworfen.",
+  "readyNewCapture": "Bereit für eine neue Aufnahme.",
+  "errorDuringAnalysis": "Fehler während der Analyse: {error}",
+  "@errorDuringAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "noSpecimensToExport": "Keine Exemplare im Satz zum Export.",
+  "exportLiveSuccess": "Erfolg! '{fileName}' erstellt mit {count} Exemplaren.",
+  "@exportLiveSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "exportLiveError": "Exportfehler: {error}",
+  "@exportLiveError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "btnDiscard": "Verwerfen",
+  "btnAccept": "Akzeptieren",
+  "btnEdit": "Bearbeiten",
+  "btnRetake": "Erneut aufnehmen",
+  "btnExportBatch": "Satz exportieren",
+  "resultRejectedPrefix": "ABGELEHNT:",
+  "resultLabel": "Ergebnis",
+  "statusApproved": "Genehmigt",
+  "statusRejected": "Abgelehnt",
+  "statusEdited": "Bearbeitet",
+  "detailMovingPoint": "Punkt {index} verschieben",
+  "@detailMovingPoint": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "detailEditor": "Editor",
+  "detailSaveTooltip": "Änderungen speichern",
+  "detailSaveSuccess": "Änderungen gespeichert.",
+  "detailRejectedBanner": "Abgelehnt: {reason}",
+  "@detailRejectedBanner": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "detailPrevPoint": "Vorheriger Punkt",
+  "detailNextPoint": "Nächster Punkt",
+  "detailPrevImage": "Vorheriges Bild",
+  "detailNextImage": "Nächstes Bild",
+  "dmTitle": "Datenmanager",
+  "dmLandmarkFiles": "Landmarken-Dateien (Eingabe)",
+  "dmAnalysisFiles": "Analyse-Dateien (Ergebnisse)",
+  "dmNoFiles": "Keine Dateien gefunden.",
+  "dmDeleteConfirmTitle": "Löschen bestätigen",
+  "dmDeleteConfirmContent": "Datei \"{file}\" löschen?",
+  "@dmDeleteConfirmContent": {
+    "placeholders": {
+      "file": {}
+    }
+  },
+  "dmDeleteCancel": "Abbrechen",
+  "dmDeleteConfirm": "Löschen",
+  "dmDeleteSuccess": "Datei gelöscht",
+  "dmDeleteError": "Fehler beim Löschen: {error}",
+  "@dmDeleteError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmAnalyzeButton": "Landmarken-Datei analysieren",
+  "dmErrorAnalysis": "Analysefehler: {error}",
+  "@dmErrorAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmCsvEmpty": "CSV leer oder nur Kopfzeile.",
+  "dmNeedThree": "Mindestens 3 gültige Exemplare erforderlich.",
+  "cameraLoadError": "Kamera konnte nicht geladen werden.",
+  "drawerInfo": "Information",
+  "drawerInfoSubtitle": "Modelldetails und Danksagungen",
+  "infoPageTitle": "Information",
+  "infoModelSection": "Verwendetes Modell",
+  "infoThanksSection": "Danksagungen",
+  "infoPlaceholder": "Bald fügen wir Details zum Modell und Credits hinzu.",
+  "appTaglineShort": "Edge AI Morphometrics",
+  "shareExport": "Teilen / Exportieren",
+  "homeEcoFieldButton": "Eco-Field-Modus",
+  "homeEcoFieldLockedMessage": "Aktiviere den Eco-Field Mode in den Einstellungen.",
+  "ecoFieldSettingsTitle": "Eco-Field Mode",
+  "ecoFieldSettingsSubtitleEnabled": "Für Feldaufnahme aktiviert",
+  "ecoFieldSettingsSubtitleDisabled": "Deaktiviert. In den Einstellungen aktivieren.",
+  "ecoFieldLocationDeniedNotice": "Standort verweigert. Erfassung läuft mit leerem GPS weiter.",
+  "ecoFieldTitle": "Eco-Field Mode",
+  "ecoFieldSessionPromptTitle": "Neue Feldsitzung",
+  "ecoFieldBatchLabel": "Batch / Population",
+  "ecoFieldBatchHint": "z. B. nord_population_01",
+  "ecoFieldBatchRequired": "Bitte einen Batch-Namen eingeben.",
+  "ecoFieldOutputModeLabel": "Ausgabemodus",
+  "ecoFieldOutputModeAiCrop": "IA-Crop (Optimiert)",
+  "ecoFieldOutputModeFullFrame": "Full-Frame (Original)",
+  "ecoFieldBlurFilterLabel": "Unschärfefilter (Laplacian)",
+  "ecoFieldStartSession": "Sitzung starten",
+  "ecoFieldCancelSession": "Abbrechen",
+  "ecoFieldSessionReady": "Sitzung bereit: {session}",
+  "ecoFieldAiConfidenceNA": "NA",
+  "ecoFieldCaptureSaved": "Gespeichert: {imageName}",
+  "ecoFieldCaptureSaveError": "Fehler beim Speichern: {error}",
+  "ecoFieldCaptureRejectedNoDetection": "Blüte nicht mit ausreichender Sicherheit erkannt.",
+  "ecoFieldCaptureRejectedBlur": "Aufnahme wegen Unschärfe verworfen.",
+  "ecoFieldCaptureRejectedCrop": "IA-Crop konnte nicht erstellt werden.",
+  "@ecoFieldSessionReady": {
+    "placeholders": {
+      "session": {}
+    }
+  },
+  "@ecoFieldCaptureSaved": {
+    "placeholders": {
+      "imageName": {}
+    }
+  },
+  "@ecoFieldCaptureSaveError": {
+    "placeholders": {
+      "error": {}
+    }
+  }
+}

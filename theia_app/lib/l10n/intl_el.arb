@@ -1,0 +1,240 @@
+{
+  "@@locale": "el",
+  "appTitle": "Theia",
+  "appTagline": "Edge AI Morphometrics.\nΚινητό φαινοτυπικό AI workflow. Ανάλυση εκτός σύνδεσης, στη συσκευή και προσβάσιμη.",
+  "themeMenuTooltip": "Επιλογή θέματος",
+  "themeSystem": "Σύστημα",
+  "themeLight": "Φωτεινό θέμα",
+  "themeDark": "Σκούρο θέμα",
+  "themeLabel": "Θέμα",
+  "languageMenuTooltip": "Επιλογή γλώσσας",
+  "languageSystem": "Γλώσσα συστήματος",
+  "languageLabel": "Γλώσσα",
+  "uiScaleTitle": "Μέγεθος διεπαφής",
+  "uiScaleHint": "κείμενο και κουμπιά",
+  "uiScaleSubtitle": "{percent}% - {hint}",
+  "@uiScaleSubtitle": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "hint": {}
+    }
+  },
+  "uiScaleReset": "Επαναφορά",
+  "uiScaleClose": "Κλείσιμο",
+  "homeLiveButton": "Ζωντανή λειτουργία (Κάμερα)",
+  "homeBatchButton": "Λειτουργία παρτίδας (Συλλογή)",
+  "homeDataManagerButton": "Διαχειριστής Δεδομένων & Ανάλυσης",
+  "splashTitle": "Theia",
+  "batchTitle": "Λειτουργία παρτίδας",
+  "btnApplyAi": "Εφαρμογή AI",
+  "btnAddGallery": "Προσθήκη από τη συλλογή",
+  "btnReplaceList": "Αντικατάσταση λίστας",
+  "imagesLoaded": "Φόρτωση εικόνων: {count}",
+  "@imagesLoaded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "btnClearList": "Εκκαθάριση λίστας",
+  "sortBy": "Ταξινόμηση κατά:",
+  "sortOriginal": "Αρχική σειρά",
+  "sortRejectedFirst": "Απορριφθέντα πρώτα",
+  "sortEditedFirst": "Επεξεργασμένα πρώτα",
+  "exportResults": "Εξαγωγή ({count}) αποτελεσμάτων",
+  "@exportResults": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noExportable": "Δεν υπάρχουν εγκεκριμένα ή επεξεργασμένα αποτελέσματα για εξαγωγή.",
+  "exportSuccess": "Επιτυχία! Δημιουργήθηκε το '{fileName}' με {count} δείγματα.",
+  "@exportSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "processingComplete": "Ολοκληρώθηκε σε {time}. Επεξεργάστηκαν {count} εικόνες.",
+  "@processingComplete": {
+    "placeholders": {
+      "time": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "stopProcess": "Διακοπή διαδικασίας",
+  "filterStructural": "Δομικό φίλτρο",
+  "filterStructuralOn": "Ενεργό (επαληθεύει θέσεις)",
+  "filterStructuralOff": "Ανενεργό (όλες οι προβλέψεις περνούν)",
+  "detectionLowConfidence": "Χαμηλή εμπιστοσύνη ανίχνευσης.",
+  "rejectionPoints": "Ασυνεπή σημεία: {points}",
+  "@rejectionPoints": {
+    "placeholders": {
+      "points": {}
+    }
+  },
+  "liveTitle": "Ζωντανή λειτουργία",
+  "liveBatchCount": "Παρτίδα: {count} δείγματα",
+  "@liveBatchCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackAddBatch": "Προστέθηκε δείγμα. Σύνολο: {count}",
+  "@snackAddBatch": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackRejectedNotAdded": "Απορρίφθηκε: {reason}. Δεν προστέθηκε.",
+  "@snackRejectedNotAdded": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "snackDiscarded": "Αποτέλεσμα απορρίφθηκε.",
+  "readyNewCapture": "Έτοιμο για νέα λήψη.",
+  "errorDuringAnalysis": "Σφάλμα κατά την ανάλυση: {error}",
+  "@errorDuringAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "noSpecimensToExport": "Δεν υπάρχουν δείγματα προς εξαγωγή.",
+  "exportLiveSuccess": "Επιτυχία! Δημιουργήθηκε το '{fileName}' με {count} δείγματα.",
+  "@exportLiveSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "exportLiveError": "Σφάλμα εξαγωγής: {error}",
+  "@exportLiveError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "btnDiscard": "Απόρριψη",
+  "btnAccept": "Αποδοχή",
+  "btnEdit": "Επεξεργασία",
+  "btnRetake": "Επανάληψη λήψης",
+  "btnExportBatch": "Εξαγωγή παρτίδας",
+  "resultRejectedPrefix": "ΑΠΟΡΡΙΦΘΗΚΕ:",
+  "resultLabel": "Αποτέλεσμα",
+  "statusApproved": "Εγκρίθηκε",
+  "statusRejected": "Απορρίφθηκε",
+  "statusEdited": "Επεξεργάστηκε",
+  "detailMovingPoint": "Μετακίνηση σημείου {index}",
+  "@detailMovingPoint": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "detailEditor": "Επεξεργαστής",
+  "detailSaveTooltip": "Αποθήκευση αλλαγών",
+  "detailSaveSuccess": "Οι αλλαγές αποθηκεύτηκαν.",
+  "detailRejectedBanner": "Απορρίφθηκε: {reason}",
+  "@detailRejectedBanner": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "detailPrevPoint": "Προηγούμενο σημείο",
+  "detailNextPoint": "Επόμενο σημείο",
+  "detailPrevImage": "Προηγούμενη εικόνα",
+  "detailNextImage": "Επόμενη εικόνα",
+  "dmTitle": "Διαχειριστής δεδομένων",
+  "dmLandmarkFiles": "Αρχεία landmarks (Είσοδος)",
+  "dmAnalysisFiles": "Αρχεία ανάλυσης (Αποτελέσματα)",
+  "dmNoFiles": "Δεν βρέθηκαν αρχεία.",
+  "dmDeleteConfirmTitle": "Επιβεβαίωση διαγραφής",
+  "dmDeleteConfirmContent": "Διαγραφή του αρχείου \"{file}\";",
+  "@dmDeleteConfirmContent": {
+    "placeholders": {
+      "file": {}
+    }
+  },
+  "dmDeleteCancel": "Ακύρωση",
+  "dmDeleteConfirm": "Διαγραφή",
+  "dmDeleteSuccess": "Το αρχείο διαγράφηκε",
+  "dmDeleteError": "Σφάλμα διαγραφής: {error}",
+  "@dmDeleteError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmAnalyzeButton": "Ανάλυση αρχείου landmarks",
+  "dmErrorAnalysis": "Σφάλμα ανάλυσης: {error}",
+  "@dmErrorAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmCsvEmpty": "CSV κενό ή μόνο κεφαλίδα.",
+  "dmNeedThree": "Απαιτούνται τουλάχιστον 3 έγκυρα δείγματα.",
+  "cameraLoadError": "Αποτυχία φόρτωσης κάμερας.",
+  "drawerInfo": "Πληροφορίες",
+  "drawerInfoSubtitle": "Λεπτομέρειες μοντέλου και ευχαριστίες",
+  "infoPageTitle": "Πληροφορίες",
+  "infoModelSection": "Μοντέλο σε χρήση",
+  "infoThanksSection": "Ευχαριστίες",
+  "infoPlaceholder": "Σύντομα θα προσθέσουμε λεπτομέρειες για το μοντέλο και τις αναφορές.",
+  "appTaglineShort": "Edge AI Morphometrics",
+  "shareExport": "Κοινοποίηση / Εξαγωγή",
+  "homeEcoFieldButton": "Λειτουργία Eco-Field",
+  "homeEcoFieldLockedMessage": "Ενεργοποιήστε το Eco-Field Mode από τις ρυθμίσεις.",
+  "ecoFieldSettingsTitle": "Eco-Field Mode",
+  "ecoFieldSettingsSubtitleEnabled": "Ενεργό για καταγραφή πεδίου",
+  "ecoFieldSettingsSubtitleDisabled": "Ανενεργό. Ενεργοποιήστε το από την αρχική οθόνη.",
+  "ecoFieldLocationDeniedNotice": "Η τοποθεσία απορρίφθηκε. Η λήψη θα συνεχίσει με κενό GPS.",
+  "ecoFieldTitle": "Eco-Field Mode",
+  "ecoFieldSessionPromptTitle": "Νέα συνεδρία πεδίου",
+  "ecoFieldBatchLabel": "Batch / Πληθυσμός",
+  "ecoFieldBatchHint": "π.χ. north_population_01",
+  "ecoFieldBatchRequired": "Δώστε όνομα batch.",
+  "ecoFieldOutputModeLabel": "Λειτουργία εξόδου",
+  "ecoFieldOutputModeAiCrop": "IA-Crop (Βελτιστοποιημένο)",
+  "ecoFieldOutputModeFullFrame": "Full-Frame (Αρχικό)",
+  "ecoFieldBlurFilterLabel": "Φίλτρο θόλωσης (Laplacian)",
+  "ecoFieldStartSession": "Έναρξη συνεδρίας",
+  "ecoFieldCancelSession": "Ακύρωση",
+  "ecoFieldSessionReady": "Η συνεδρία είναι έτοιμη: {session}",
+  "ecoFieldAiConfidenceNA": "NA",
+  "ecoFieldCaptureSaved": "Αποθηκεύτηκε: {imageName}",
+  "ecoFieldCaptureSaveError": "Σφάλμα αποθήκευσης: {error}",
+  "ecoFieldCaptureRejectedNoDetection": "Το άνθος δεν ανιχνεύτηκε με επαρκή βεβαιότητα.",
+  "ecoFieldCaptureRejectedBlur": "Η λήψη απορρίφθηκε λόγω θόλωσης.",
+  "ecoFieldCaptureRejectedCrop": "Αδυναμία δημιουργίας IA crop.",
+  "@ecoFieldSessionReady": {
+    "placeholders": {
+      "session": {}
+    }
+  },
+  "@ecoFieldCaptureSaved": {
+    "placeholders": {
+      "imageName": {}
+    }
+  },
+  "@ecoFieldCaptureSaveError": {
+    "placeholders": {
+      "error": {}
+    }
+  }
+}
