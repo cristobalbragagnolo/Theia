@@ -1,0 +1,241 @@
+{
+  "@@locale": "en",
+  "appTitle": "Theia",
+  "appTagline": "Edge AI Morphometrics.\nMobile phenotypic AI workflow. Offline, on-device, and accessible analysis.",
+  "themeMenuTooltip": "Select theme",
+  "themeSystem": "Follow system",
+  "themeLight": "Light mode",
+  "themeDark": "Dark mode",
+  "themeLabel": "Theme",
+  "languageMenuTooltip": "Choose language",
+  "languageSystem": "Use system language",
+  "languageLabel": "Language",
+  "uiScaleTitle": "Interface size",
+  "uiScaleHint": "text and buttons",
+  "uiScaleSubtitle": "{percent}% - {hint}",
+  "@uiScaleSubtitle": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "hint": {}
+    }
+  },
+  "uiScaleReset": "Reset",
+  "uiScaleClose": "Close",
+  "homeLiveButton": "Live Mode (Camera)",
+  "homeBatchButton": "Batch Mode (Gallery)",
+  "homeDataManagerButton": "Data & Analysis Manager",
+  "splashTitle": "Theia",
+  "batchTitle": "Batch Mode",
+  "btnApplyAi": "Apply AI",
+  "btnAddGallery": "Add from Gallery",
+  "btnReplaceList": "Replace List",
+  "imagesLoaded": "Images loaded: {count}",
+  "@imagesLoaded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "btnClearList": "Clear List",
+  "sortBy": "Sort by:",
+  "sortOriginal": "Original order",
+  "sortRejectedFirst": "Rejected first",
+  "sortEditedFirst": "Edited first",
+  "exportResults": "Export ({count}) Results",
+  "@exportResults": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noExportable": "No approved or edited results to export.",
+  "exportSuccess": "Success! '{fileName}' created with {count} specimens.",
+  "@exportSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "processingComplete": "Process finished in {time}. {count} images processed.",
+  "@processingComplete": {
+    "placeholders": {
+      "time": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "stopProcess": "Stop Process",
+  "filterStructural": "Structural filter",
+  "filterStructuralOn": "On (validates positions)",
+  "filterStructuralOff": "Off (all predictions pass)",
+  "detectionLowConfidence": "Low detection confidence.",
+  "rejectionPoints": "Inconsistent point(s): {points}",
+  "@rejectionPoints": {
+    "placeholders": {
+      "points": {}
+    }
+  },
+  "liveTitle": "Live Mode",
+  "liveBatchCount": "Batch: {count} specimens",
+  "@liveBatchCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackAddBatch": "Specimen added. Total: {count}",
+  "@snackAddBatch": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackRejectedNotAdded": "Rejected: {reason}. Not added.",
+  "@snackRejectedNotAdded": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "snackDiscarded": "Result discarded.",
+  "readyNewCapture": "Ready for a new capture.",
+  "errorDuringAnalysis": "Error during analysis: {error}",
+  "@errorDuringAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "noSpecimensToExport": "No specimens in the batch to export.",
+  "exportLiveSuccess": "Success! '{fileName}' created with {count} specimens.",
+  "@exportLiveSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "exportLiveError": "Export error: {error}",
+  "@exportLiveError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "btnDiscard": "Discard",
+  "btnAccept": "Accept",
+  "btnEdit": "Edit",
+  "btnRetake": "Retake",
+  "btnExportBatch": "Export Batch",
+  "resultRejectedPrefix": "REJECTED:",
+  "resultLabel": "Result",
+  "statusApproved": "Approved",
+  "statusRejected": "Rejected",
+  "statusEdited": "Edited",
+  "detailMovingPoint": "Moving Point {index}",
+  "@detailMovingPoint": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "detailEditor": "Editor",
+  "detailSaveTooltip": "Save Changes",
+  "detailSaveSuccess": "Changes saved.",
+  "detailRejectedBanner": "Rejected: {reason}",
+  "@detailRejectedBanner": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "detailPrevPoint": "Previous Point",
+  "detailNextPoint": "Next Point",
+  "detailPrevImage": "Previous image",
+  "detailNextImage": "Next image",
+  "dmTitle": "Data Manager",
+  "dmLandmarkFiles": "Landmark files (Input)",
+  "dmAnalysisFiles": "Analysis files (Results)",
+  "dmNoFiles": "No files found.",
+  "dmDeleteConfirmTitle": "Confirm delete",
+  "dmDeleteConfirmContent": "Delete file \"{file}\"?",
+  "@dmDeleteConfirmContent": {
+    "placeholders": {
+      "file": {}
+    }
+  },
+  "dmDeleteCancel": "Cancel",
+  "dmDeleteConfirm": "Delete",
+  "dmDeleteSuccess": "File deleted",
+  "dmDeleteError": "Error deleting: {error}",
+  "@dmDeleteError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmAnalyzeButton": "Analyze landmark file",
+  "dmErrorAnalysis": "Analysis error: {error}",
+  "@dmErrorAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmCsvEmpty": "CSV empty or header only.",
+  "dmNeedThree": "At least 3 valid specimens are required.",
+  "cameraLoadError": "Camera failed to load.",
+  "drawerInfo": "Information",
+  "drawerInfoSubtitle": "Model details and acknowledgements",
+  "infoPageTitle": "Information",
+  "infoModelSection": "Model in use",
+  "infoThanksSection": "Acknowledgements",
+  "infoPlaceholder": "We will soon add details about the current model and credits.",
+  "infoAcknowledgementsBody": "The deep learning algorithms in this app, much like science in general, are built upon the work of those who came before us. For this reason, I would like to thank Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares, and Andrés Ferreira Rodríguez for their annotation work and incredible support.\n\nThis app was created with love, curiosity, and a lot of hard work. Therefore, I want to express my gratitude to my parents and family for teaching me these values.\n\nI hope this tool proves useful for scientific research and helps those who come after us to discover and invent even better things.",
+  "appTaglineShort": "Edge AI Morphometrics",
+  "shareExport": "Share / Export",
+  "homeEcoFieldButton": "Eco-Field Mode",
+  "homeEcoFieldLockedMessage": "Enable Eco-Field Mode in Settings to use it.",
+  "ecoFieldSettingsTitle": "Eco-Field Mode",
+  "ecoFieldSettingsSubtitleEnabled": "Enabled for field capture",
+  "ecoFieldSettingsSubtitleDisabled": "Disabled. Enable it to use from Home.",
+  "ecoFieldLocationDeniedNotice": "Location denied. Captures will continue with empty GPS fields.",
+  "ecoFieldTitle": "Eco-Field Mode",
+  "ecoFieldSessionPromptTitle": "New field session",
+  "ecoFieldBatchLabel": "Batch / Population",
+  "ecoFieldBatchHint": "e.g. north_population_01",
+  "ecoFieldBatchRequired": "Please provide a batch name.",
+  "ecoFieldOutputModeLabel": "Output mode",
+  "ecoFieldOutputModeAiCrop": "IA-Crop (Optimized)",
+  "ecoFieldOutputModeFullFrame": "Full-Frame (Original)",
+  "ecoFieldBlurFilterLabel": "Blur filter (Laplacian)",
+  "ecoFieldStartSession": "Start session",
+  "ecoFieldCancelSession": "Cancel",
+  "ecoFieldSessionReady": "Session ready: {session}",
+  "ecoFieldAiConfidenceNA": "NA",
+  "ecoFieldCaptureSaved": "Saved: {imageName}",
+  "ecoFieldCaptureSaveError": "Capture save error: {error}",
+  "ecoFieldCaptureRejectedNoDetection": "Flower not detected with enough confidence.",
+  "ecoFieldCaptureRejectedBlur": "Capture discarded due to blur.",
+  "ecoFieldCaptureRejectedCrop": "Unable to generate AI crop.",
+  "@ecoFieldSessionReady": {
+    "placeholders": {
+      "session": {}
+    }
+  },
+  "@ecoFieldCaptureSaved": {
+    "placeholders": {
+      "imageName": {}
+    }
+  },
+  "@ecoFieldCaptureSaveError": {
+    "placeholders": {
+      "error": {}
+    }
+  }
+}

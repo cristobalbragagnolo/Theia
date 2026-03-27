@@ -1,0 +1,51 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "theia",
+        "request": "launch",
+        "type": "dart"
+      },
+      {
+        "name": "theia (profile mode)",
+        "request": "launch",
+        "type": "dart",
+        "flutterMode": "profile"
+      },
+      {
+        "name": "theia (release mode)",
+        "request": "launch",
+        "type": "dart",
+        "flutterMode": "release"
+      },
+  
+      {
+        "name": "GPA CLI",
+        "type": "dart",
+        "request": "launch",
+        "program": "bin/gpa_cli.dart",
+        "args": [
+          "--k=3",
+          "--head=10",
+          "--verbose",
+          "/Users/crismbp/Desktop/PruebaMA/theia_poblacion_03-11-2025_17-15_157-especimenes.csv"
+        ]
+      },
+  
+      {
+        "name": "GPA CLI (con refs R)",
+        "type": "dart",
+        "request": "launch",
+        "program": "bin/gpa_cli.dart",
+        "args": [
+          "--k=3",
+          "--head=10",
+          "--verbose",
+          "--ref-pca=/Users/crismbp/Desktop/PruebaMA/ref_pca.csv",
+          "--ref-var=/Users/crismbp/Desktop/PruebaMA/ref_var.csv",
+          "--ref-mean=/Users/crismbp/Desktop/PruebaMA/ref_mean.csv",
+          "/Users/crismbp/Desktop/PruebaMA/theia_poblacion_03-11-2025_17-15_157-especimenes.csv"
+        ]
+      }
+    ]
+  }

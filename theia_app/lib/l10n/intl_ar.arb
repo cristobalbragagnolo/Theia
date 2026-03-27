@@ -1,0 +1,240 @@
+{
+  "@@locale": "ar",
+  "appTitle": "Theia",
+  "appTagline": "Edge AI Morphometrics.\nسير عمل ذكاء اصطناعي ظاهري للهواتف المحمولة. تحليل بلا اتصال، على الجهاز، ومتاحة للجميع.",
+  "themeMenuTooltip": "اختيار السمة",
+  "themeSystem": "اتباع النظام",
+  "themeLight": "الوضع الفاتح",
+  "themeDark": "الوضع الداكن",
+  "themeLabel": "السمة",
+  "languageMenuTooltip": "اختيار اللغة",
+  "languageSystem": "استخدام لغة النظام",
+  "languageLabel": "اللغة",
+  "uiScaleTitle": "حجم الواجهة",
+  "uiScaleHint": "النص والأزرار",
+  "uiScaleSubtitle": "{percent}% - {hint}",
+  "@uiScaleSubtitle": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "hint": {}
+    }
+  },
+  "uiScaleReset": "إعادة تعيين",
+  "uiScaleClose": "إغلاق",
+  "homeLiveButton": "وضع مباشر (الكاميرا)",
+  "homeBatchButton": "وضع دفعة (المعرض)",
+  "homeDataManagerButton": "مدير البيانات والتحليل",
+  "splashTitle": "Theia",
+  "batchTitle": "وضع الدفعة",
+  "btnApplyAi": "تطبيق الذكاء الاصطناعي",
+  "btnAddGallery": "إضافة من المعرض",
+  "btnReplaceList": "استبدال القائمة",
+  "imagesLoaded": "تم تحميل الصور: {count}",
+  "@imagesLoaded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "btnClearList": "تفريغ القائمة",
+  "sortBy": "الترتيب حسب:",
+  "sortOriginal": "الترتيب الأصلي",
+  "sortRejectedFirst": "المرفوض أولاً",
+  "sortEditedFirst": "المعدل أولاً",
+  "exportResults": "تصدير ({count}) من النتائج",
+  "@exportResults": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noExportable": "لا توجد نتائج معتمدة أو معدلة للتصدير.",
+  "exportSuccess": "تم بنجاح! تم إنشاء '{fileName}' مع {count} عيّنات.",
+  "@exportSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "processingComplete": "اكتملت العملية خلال {time}. تمت معالجة {count} صورة.",
+  "@processingComplete": {
+    "placeholders": {
+      "time": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "stopProcess": "إيقاف العملية",
+  "filterStructural": "مرشح هيكلي",
+  "filterStructuralOn": "مفعّل (يتحقق من المواقع)",
+  "filterStructuralOff": "معطل (تمرير كل التنبؤات)",
+  "detectionLowConfidence": "ثقة الاكتشاف منخفضة.",
+  "rejectionPoints": "نقاط غير متسقة: {points}",
+  "@rejectionPoints": {
+    "placeholders": {
+      "points": {}
+    }
+  },
+  "liveTitle": "وضع مباشر",
+  "liveBatchCount": "دفعة: {count} عيّنات",
+  "@liveBatchCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackAddBatch": "تمت إضافة عينة. المجموع: {count}",
+  "@snackAddBatch": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackRejectedNotAdded": "مرفوض: {reason}. لم تتم الإضافة.",
+  "@snackRejectedNotAdded": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "snackDiscarded": "تم حذف النتيجة.",
+  "readyNewCapture": "جاهز لالتقاط جديد.",
+  "errorDuringAnalysis": "خطأ أثناء التحليل: {error}",
+  "@errorDuringAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "noSpecimensToExport": "لا توجد عيّنات للتصدير.",
+  "exportLiveSuccess": "تم بنجاح! تم إنشاء '{fileName}' مع {count} عيّنات.",
+  "@exportLiveSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "exportLiveError": "خطأ في التصدير: {error}",
+  "@exportLiveError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "btnDiscard": "حذف",
+  "btnAccept": "قبول",
+  "btnEdit": "تعديل",
+  "btnRetake": "إعادة الالتقاط",
+  "btnExportBatch": "تصدير الدفعة",
+  "resultRejectedPrefix": "مرفوض:",
+  "resultLabel": "النتيجة",
+  "statusApproved": "مقبول",
+  "statusRejected": "مرفوض",
+  "statusEdited": "معدّل",
+  "detailMovingPoint": "تحريك النقطة {index}",
+  "@detailMovingPoint": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "detailEditor": "المحرر",
+  "detailSaveTooltip": "حفظ التغييرات",
+  "detailSaveSuccess": "تم حفظ التغييرات.",
+  "detailRejectedBanner": "مرفوض: {reason}",
+  "@detailRejectedBanner": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "detailPrevPoint": "النقطة السابقة",
+  "detailNextPoint": "النقطة التالية",
+  "detailPrevImage": "الصورة السابقة",
+  "detailNextImage": "الصورة التالية",
+  "dmTitle": "مدير البيانات",
+  "dmLandmarkFiles": "ملفات العلامات (إدخال)",
+  "dmAnalysisFiles": "ملفات التحليل (نتائج)",
+  "dmNoFiles": "لم يتم العثور على ملفات.",
+  "dmDeleteConfirmTitle": "تأكيد الحذف",
+  "dmDeleteConfirmContent": "حذف الملف \"{file}\"؟",
+  "@dmDeleteConfirmContent": {
+    "placeholders": {
+      "file": {}
+    }
+  },
+  "dmDeleteCancel": "إلغاء",
+  "dmDeleteConfirm": "حذف",
+  "dmDeleteSuccess": "تم حذف الملف",
+  "dmDeleteError": "خطأ في الحذف: {error}",
+  "@dmDeleteError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmAnalyzeButton": "تحليل ملف العلامات",
+  "dmErrorAnalysis": "خطأ في التحليل: {error}",
+  "@dmErrorAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmCsvEmpty": "ملف CSV فارغ أو يحتوي على العنوان فقط.",
+  "dmNeedThree": "مطلوب 3 عينات صالحة على الأقل.",
+  "cameraLoadError": "تعذر تحميل الكاميرا.",
+  "drawerInfo": "معلومات",
+  "drawerInfoSubtitle": "تفاصيل النموذج والشكر",
+  "infoPageTitle": "معلومات",
+  "infoModelSection": "النموذج المستخدم",
+  "infoThanksSection": "شكر وتقدير",
+  "infoPlaceholder": "سنضيف قريباً تفاصيل حول النموذج والشكر.",
+  "appTaglineShort": "Edge AI Morphometrics",
+  "shareExport": "مشاركة / تصدير",
+  "homeEcoFieldButton": "وضع Eco-Field",
+  "homeEcoFieldLockedMessage": "فعّل Eco-Field Mode من الإعدادات لاستخدامه.",
+  "ecoFieldSettingsTitle": "Eco-Field Mode",
+  "ecoFieldSettingsSubtitleEnabled": "مفعل لالتقاط البيانات الميدانية",
+  "ecoFieldSettingsSubtitleDisabled": "غير مفعل. قم بتفعيله من الإعدادات.",
+  "ecoFieldLocationDeniedNotice": "تم رفض الموقع. سيستمر الالتقاط مع GPS فارغ.",
+  "ecoFieldTitle": "Eco-Field Mode",
+  "ecoFieldSessionPromptTitle": "جلسة ميدانية جديدة",
+  "ecoFieldBatchLabel": "Batch / مجموعة",
+  "ecoFieldBatchHint": "مثال: north_population_01",
+  "ecoFieldBatchRequired": "أدخل اسم batch.",
+  "ecoFieldOutputModeLabel": "وضع الإخراج",
+  "ecoFieldOutputModeAiCrop": "IA-Crop (محسّن)",
+  "ecoFieldOutputModeFullFrame": "Full-Frame (أصلي)",
+  "ecoFieldBlurFilterLabel": "مرشح الضبابية (Laplacian)",
+  "ecoFieldStartSession": "بدء الجلسة",
+  "ecoFieldCancelSession": "إلغاء",
+  "ecoFieldSessionReady": "الجلسة جاهزة: {session}",
+  "ecoFieldAiConfidenceNA": "NA",
+  "ecoFieldCaptureSaved": "تم الحفظ: {imageName}",
+  "ecoFieldCaptureSaveError": "خطأ في حفظ الالتقاط: {error}",
+  "ecoFieldCaptureRejectedNoDetection": "لم يتم اكتشاف الزهرة بثقة كافية.",
+  "ecoFieldCaptureRejectedBlur": "تم رفض الالتقاط بسبب الضبابية.",
+  "ecoFieldCaptureRejectedCrop": "تعذر إنشاء قص IA.",
+  "@ecoFieldSessionReady": {
+    "placeholders": {
+      "session": {}
+    }
+  },
+  "@ecoFieldCaptureSaved": {
+    "placeholders": {
+      "imageName": {}
+    }
+  },
+  "@ecoFieldCaptureSaveError": {
+    "placeholders": {
+      "error": {}
+    }
+  }
+}

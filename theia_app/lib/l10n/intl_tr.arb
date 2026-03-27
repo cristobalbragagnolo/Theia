@@ -1,0 +1,240 @@
+{
+  "@@locale": "tr",
+  "appTitle": "Theia",
+  "appTagline": "Edge AI Morphometrics.\nMobil fenotipik yapay zeka iş akışı. Çevrimdışı, cihaz üzerinde ve erişilebilir analiz.",
+  "themeMenuTooltip": "Tema seç",
+  "themeSystem": "Sistemi izle",
+  "themeLight": "Aydınlık mod",
+  "themeDark": "Karanlık mod",
+  "themeLabel": "Tema",
+  "languageMenuTooltip": "Dil seç",
+  "languageSystem": "Sistem dilini kullan",
+  "languageLabel": "Dil",
+  "uiScaleTitle": "Arayüz boyutu",
+  "uiScaleHint": "metin ve düğmeler",
+  "uiScaleSubtitle": "{percent}% - {hint}",
+  "@uiScaleSubtitle": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "hint": {}
+    }
+  },
+  "uiScaleReset": "Sıfırla",
+  "uiScaleClose": "Kapat",
+  "homeLiveButton": "Canlı Mod (Kamera)",
+  "homeBatchButton": "Toplu Mod (Galeri)",
+  "homeDataManagerButton": "Veri ve Analiz Yöneticisi",
+  "splashTitle": "Theia",
+  "batchTitle": "Toplu Mod",
+  "btnApplyAi": "Yapay zekayı uygula",
+  "btnAddGallery": "Galeriden ekle",
+  "btnReplaceList": "Listeyi değiştir",
+  "imagesLoaded": "Yüklenen görsel: {count}",
+  "@imagesLoaded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "btnClearList": "Listeyi temizle",
+  "sortBy": "Sırala:",
+  "sortOriginal": "Orijinal sıra",
+  "sortRejectedFirst": "Önce reddedilenler",
+  "sortEditedFirst": "Önce düzenlenenler",
+  "exportResults": "({count}) Sonucu dışa aktar",
+  "@exportResults": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noExportable": "Dışa aktarılacak onaylı veya düzenlenmiş sonuç yok.",
+  "exportSuccess": "Başarılı! '{fileName}' {count} örnekle oluşturuldu.",
+  "@exportSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "processingComplete": "İşlem {time} içinde tamamlandı. {count} görsel işlendi.",
+  "@processingComplete": {
+    "placeholders": {
+      "time": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "stopProcess": "İşlemi durdur",
+  "filterStructural": "Yapısal filtre",
+  "filterStructuralOn": "Açık (konumları doğrular)",
+  "filterStructuralOff": "Kapalı (tüm tahminler geçer)",
+  "detectionLowConfidence": "Düşük tespit güveni.",
+  "rejectionPoints": "Tutarsız nokta(lar): {points}",
+  "@rejectionPoints": {
+    "placeholders": {
+      "points": {}
+    }
+  },
+  "liveTitle": "Canlı Mod",
+  "liveBatchCount": "Toplu: {count} örnek",
+  "@liveBatchCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackAddBatch": "Örnek eklendi. Toplam: {count}",
+  "@snackAddBatch": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "snackRejectedNotAdded": "Reddedildi: {reason}. Eklenmedi.",
+  "@snackRejectedNotAdded": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "snackDiscarded": "Sonuç atıldı.",
+  "readyNewCapture": "Yeni çekim için hazır.",
+  "errorDuringAnalysis": "Analiz sırasında hata: {error}",
+  "@errorDuringAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "noSpecimensToExport": "Dışa aktarılacak örnek yok.",
+  "exportLiveSuccess": "Başarılı! '{fileName}' {count} örnekle oluşturuldu.",
+  "@exportLiveSuccess": {
+    "placeholders": {
+      "fileName": {},
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "exportLiveError": "Dışa aktarma hatası: {error}",
+  "@exportLiveError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "btnDiscard": "At",
+  "btnAccept": "Kabul et",
+  "btnEdit": "Düzenle",
+  "btnRetake": "Tekrar çek",
+  "btnExportBatch": "Topluyu dışa aktar",
+  "resultRejectedPrefix": "REDDEDİLDİ:",
+  "resultLabel": "Sonuç",
+  "statusApproved": "Onaylandı",
+  "statusRejected": "Reddedildi",
+  "statusEdited": "Düzenlendi",
+  "detailMovingPoint": "{index}. nokta taşınıyor",
+  "@detailMovingPoint": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "detailEditor": "Düzenleyici",
+  "detailSaveTooltip": "Değişiklikleri kaydet",
+  "detailSaveSuccess": "Değişiklikler kaydedildi.",
+  "detailRejectedBanner": "Reddedildi: {reason}",
+  "@detailRejectedBanner": {
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "detailPrevPoint": "Önceki nokta",
+  "detailNextPoint": "Sonraki nokta",
+  "detailPrevImage": "Önceki görsel",
+  "detailNextImage": "Sonraki görsel",
+  "dmTitle": "Veri Yöneticisi",
+  "dmLandmarkFiles": "Landmark dosyaları (Girdi)",
+  "dmAnalysisFiles": "Analiz dosyaları (Sonuçlar)",
+  "dmNoFiles": "Dosya bulunamadı.",
+  "dmDeleteConfirmTitle": "Silme onayı",
+  "dmDeleteConfirmContent": "\"{file}\" dosyası silinsin mi?",
+  "@dmDeleteConfirmContent": {
+    "placeholders": {
+      "file": {}
+    }
+  },
+  "dmDeleteCancel": "Vazgeç",
+  "dmDeleteConfirm": "Sil",
+  "dmDeleteSuccess": "Dosya silindi",
+  "dmDeleteError": "Silme hatası: {error}",
+  "@dmDeleteError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmAnalyzeButton": "Landmark dosyasını analiz et",
+  "dmErrorAnalysis": "Analiz hatası: {error}",
+  "@dmErrorAnalysis": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "dmCsvEmpty": "CSV boş ya da sadece başlık.",
+  "dmNeedThree": "En az 3 geçerli örnek gerekir.",
+  "cameraLoadError": "Kamera yüklenemedi.",
+  "drawerInfo": "Bilgi",
+  "drawerInfoSubtitle": "Model ve teşekkürler",
+  "infoPageTitle": "Bilgi",
+  "infoModelSection": "Kullanılan model",
+  "infoThanksSection": "Teşekkürler",
+  "infoPlaceholder": "Yakında mevcut model ve krediler eklenecek.",
+  "appTaglineShort": "Edge AI Morphometrics",
+  "shareExport": "Paylaş / Dışa aktar",
+  "homeEcoFieldButton": "Eco-Field Modu",
+  "homeEcoFieldLockedMessage": "Kullanmak için ayarlardan Eco-Field Mode'u etkinleştir.",
+  "ecoFieldSettingsTitle": "Eco-Field Mode",
+  "ecoFieldSettingsSubtitleEnabled": "Saha yakalama için etkin",
+  "ecoFieldSettingsSubtitleDisabled": "Devre dışı. Ana sayfadan kullanmak için etkinleştirin.",
+  "ecoFieldLocationDeniedNotice": "Konum reddedildi. Çekimler boş GPS ile devam eder.",
+  "ecoFieldTitle": "Eco-Field Mode",
+  "ecoFieldSessionPromptTitle": "Yeni saha oturumu",
+  "ecoFieldBatchLabel": "Batch / Popülasyon",
+  "ecoFieldBatchHint": "örn. kuzey_populasyon_01",
+  "ecoFieldBatchRequired": "Bir batch adı girin.",
+  "ecoFieldOutputModeLabel": "Çıkış modu",
+  "ecoFieldOutputModeAiCrop": "IA-Crop (Optimize)",
+  "ecoFieldOutputModeFullFrame": "Full-Frame (Orijinal)",
+  "ecoFieldBlurFilterLabel": "Bulanıklık filtresi (Laplacian)",
+  "ecoFieldStartSession": "Oturumu başlat",
+  "ecoFieldCancelSession": "İptal",
+  "ecoFieldSessionReady": "Oturum hazır: {session}",
+  "ecoFieldAiConfidenceNA": "NA",
+  "ecoFieldCaptureSaved": "Kaydedildi: {imageName}",
+  "ecoFieldCaptureSaveError": "Kayıt hatası: {error}",
+  "ecoFieldCaptureRejectedNoDetection": "Çiçek yeterli güvenle algılanamadı.",
+  "ecoFieldCaptureRejectedBlur": "Çekim bulanıklık nedeniyle reddedildi.",
+  "ecoFieldCaptureRejectedCrop": "IA kırpması oluşturulamadı.",
+  "@ecoFieldSessionReady": {
+    "placeholders": {
+      "session": {}
+    }
+  },
+  "@ecoFieldCaptureSaved": {
+    "placeholders": {
+      "imageName": {}
+    }
+  },
+  "@ecoFieldCaptureSaveError": {
+    "placeholders": {
+      "error": {}
+    }
+  }
+}

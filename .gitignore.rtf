@@ -1,0 +1,46 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2868
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 # ==========================================\
+# THEIA - MEE Repository .gitignore\
+# ==========================================\
+\
+# 1. Python & Jupyter Notebooks\
+__pycache__/\
+*.py[cod]\
+*$py.class\
+.ipynb_checkpoints/\
+.env\
+venv/\
+env/\
+\
+# 2. Deep Learning Weights & Large Models\
+# (These will be hosted on GitHub Releases / Zenodo due to size limits)\
+models_weights/\
+*.pt\
+*.tflite\
+*.onnx\
+*.zip\
+\
+# 3. Flutter & Android Build Files (theia_app)\
+theia_app/build/\
+theia_app/.dart_tool/\
+theia_app/.flutter-plugins\
+theia_app/.flutter-plugins-dependencies\
+theia_app/.packages\
+theia_app/.pub-cache/\
+theia_app/.pub/\
+theia_app/android/.gradle/\
+theia_app/android/app/build/\
+theia_app/android/local.properties\
+*.apk\
+*.aab\
+*.keystore\
+\
+# 4. OS Generated Files\
+.DS_Store\
+Thumbs.db}
