@@ -311,7 +311,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get infoAcknowledgementsBody =>
-      'Los algoritmos de DeepLearning de esta aplicación, como la ciencia en general, están construidas sobre el trabajo que hicieron otras personas antes que nosotros. Por eso quiero agradecer a Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares y Andrés Ferreira Rodríguez por su trabajo en anotación y su gran apoyo.\n\nEsta app esta hecha con amor, curiosidad y mucho trabajo. Por lo cual quiero agradecerles a mis padres y mi familia que me inculcaron esos valores.\n\nEspero que esta herramienta sirva para la investigación científica y ayude a los que vienen luego a descubrir e inventar cosas aun mejores.';
+      '本应用中的深度学习算法与科学本身一样，建立在前人的工作之上。因此，我想感谢 Mohamed (Moha) Abdelaziz、A. Jesús Muñoz-Pajares 和 Andrés Ferreira Rodríguez 在标注工作中的贡献以及他们给予的巨大支持。\n\n这款应用凝聚了爱、好奇心和大量努力。因此，我也想感谢我的父母和家人，是他们教会了我这些价值。\n\n希望这个工具能对科学研究有所帮助，并帮助后来者发现并创造出更好的成果。';
 
   @override
   String get appTaglineShort => 'Edge AI Morphometrics';
@@ -396,4 +396,124 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get ecoFieldCaptureRejectedCrop => '无法生成 IA 裁剪图。';
+
+  @override
+  String analysisPcaError(Object error) {
+    return '计算 PCA 时出错：$error';
+  }
+
+  @override
+  String get analysisTitle => '分析结果';
+
+  @override
+  String get analysisNavTable => '表格';
+
+  @override
+  String get analysisNavSave => '保存';
+
+  @override
+  String get analysisWireframesSection => '形变线框 ±2SD';
+
+  @override
+  String get analysisNoComponents => '无法计算主成分。';
+
+  @override
+  String get analysisScoresSection => '得分表';
+
+  @override
+  String get analysisInterpretationSection => '解释与保存';
+
+  @override
+  String get analysisInterpretationHint => '例如：PC1：花冠开度；PC2：曲率；PC3：基部变化……';
+
+  @override
+  String get analysisSaveWithInterpretation => '连同解释一起保存';
+
+  @override
+  String analysisWireframeMeanLabel(Object title) {
+    return '均值 · $title';
+  }
+
+  @override
+  String get analysisNoInterpretation => '无解释';
+
+  @override
+  String get analysisCsvHeaderImage => '图像';
+
+  @override
+  String get analysisCsvHeaderInterpretation => '解释';
+
+  @override
+  String analysisExportedBoth(Object csvFile, Object jsonFile) {
+    return '已导出：$csvFile 和 $jsonFile';
+  }
+
+  @override
+  String analysisExportedSingle(Object csvFile) {
+    return '已导出：$csvFile';
+  }
+
+  @override
+  String get analysisShareSubject => 'Edge AI Morphometrics - 分析';
+
+  @override
+  String get analysisShareText => '从 Theia 导出的文件';
+
+  @override
+  String analysisShareError(Object error) {
+    return '无法分享文件：$error';
+  }
+
+  @override
+  String get analysisHcdaiNote =>
+      '🧠 HCDAI 说明：\n线框显示的是相对于平均形态的假设性 ±2SD 形变。\n请通过与真实样本比较，从生物学角度进行解释（开度、曲率、对称性）。';
+
+  @override
+  String get morphTitle => '形态空间（PC1 vs PC2）';
+
+  @override
+  String get morphClearSelectionTooltip => '清除选择';
+
+  @override
+  String get morphAxisLabel => 'PC1（X 轴）  /  PC2（Y 轴）';
+
+  @override
+  String get specimenViewerMean => '均值';
+
+  @override
+  String get specimenViewerSpecimen => '样本';
+
+  @override
+  String get specimenViewerOverlay => '叠加';
+
+  @override
+  String get dmSelectFileFirst => '请先选择一个文件。';
+
+  @override
+  String dmShareError(Object error) {
+    return '无法分享：$error';
+  }
+
+  @override
+  String get dmAnalysisJsonNotFound => '未找到可打开的分析 JSON。';
+
+  @override
+  String dmOpenAnalysisError(Object error) {
+    return '无法打开分析：$error';
+  }
+
+  @override
+  String get dmInvalidJsonFormat => 'JSON 格式无效';
+
+  @override
+  String get dmExpectedJsonObject => '应为 JSON 对象';
+
+  @override
+  String get dmExpectedMatrixList => '应为列表格式的矩阵';
+
+  @override
+  String get dmEmptyMatrix => '空矩阵';
+
+  @override
+  String get dmExpectedMatricesList => '应为矩阵列表';
 }

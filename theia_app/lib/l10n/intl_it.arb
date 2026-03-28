@@ -236,5 +236,77 @@
     "placeholders": {
       "error": {}
     }
+  },
+  "analysisPcaError": "Errore nel calcolo della PCA: {error}",
+  "analysisTitle": "Risultati dell’analisi",
+  "analysisNavTable": "Tabella",
+  "analysisNavSave": "Salva",
+  "analysisWireframesSection": "Wireframe di deformazione ±2DS",
+  "analysisNoComponents": "Impossibile calcolare le componenti principali.",
+  "analysisScoresSection": "Tabella dei punteggi",
+  "analysisInterpretationSection": "Interpretazione e salvataggio",
+  "analysisInterpretationHint": "es.: PC1: apertura corollina; PC2: curvatura; PC3: variazione basale...",
+  "analysisSaveWithInterpretation": "Salva con interpretazione",
+  "analysisWireframeMeanLabel": "Media · {title}",
+  "analysisNoInterpretation": "Senza interpretazione",
+  "analysisCsvHeaderImage": "Immagine",
+  "analysisCsvHeaderInterpretation": "Interpretazione",
+  "analysisExportedBoth": "Esportati: {csvFile} e {jsonFile}",
+  "analysisExportedSingle": "Esportato: {csvFile}",
+  "analysisShareSubject": "Edge AI Morphometrics - analisi",
+  "analysisShareText": "File esportati da Theia",
+  "analysisShareError": "Impossibile condividere i file: {error}",
+  "analysisHcdaiNote": "🧠 Nota HCDAI:\nI wireframe mostrano deformazioni ipotetiche ±2DS sulla forma media.\nInterpretale biologicamente (apertura, curvatura, simmetria) confrontandole con esemplari reali.",
+  "morphTitle": "Morfospazio (PC1 vs PC2)",
+  "morphClearSelectionTooltip": "Cancella selezione",
+  "morphAxisLabel": "PC1 (Asse X)  /  PC2 (Asse Y)",
+  "specimenViewerMean": "Media",
+  "specimenViewerSpecimen": "Esemplare",
+  "specimenViewerOverlay": "Sovrapposti",
+  "dmSelectFileFirst": "Seleziona prima un file.",
+  "dmShareError": "Impossibile condividere: {error}",
+  "dmAnalysisJsonNotFound": "JSON dell’analisi non trovato per l’apertura.",
+  "dmOpenAnalysisError": "Impossibile aprire l’analisi: {error}",
+  "dmInvalidJsonFormat": "Formato JSON non valido",
+  "dmExpectedJsonObject": "Oggetto JSON previsto",
+  "dmExpectedMatrixList": "Matrice prevista in formato lista",
+  "dmEmptyMatrix": "Matrice vuota",
+  "dmExpectedMatricesList": "Previsto un elenco di matrici",
+  "infoAcknowledgementsBody": "Gli algoritmi di deep learning di questa app, come la scienza in generale, si basano sul lavoro di chi è venuto prima di noi. Per questo desidero ringraziare Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares e Andrés Ferreira Rodríguez per il loro lavoro di annotazione e il loro incredibile supporto.\n\nQuesta app è stata creata con amore, curiosità e molto impegno. Per questo voglio ringraziare i miei genitori e la mia famiglia per avermi trasmesso questi valori.\n\nSpero che questo strumento sia utile alla ricerca scientifica e aiuti chi verrà dopo di noi a scoprire e inventare cose ancora migliori.",
+  "@analysisPcaError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@analysisWireframeMeanLabel": {
+    "placeholders": {
+      "title": {}
+    }
+  },
+  "@analysisExportedBoth": {
+    "placeholders": {
+      "csvFile": {},
+      "jsonFile": {}
+    }
+  },
+  "@analysisExportedSingle": {
+    "placeholders": {
+      "csvFile": {}
+    }
+  },
+  "@analysisShareError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@dmShareError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@dmOpenAnalysisError": {
+    "placeholders": {
+      "error": {}
+    }
   }
 }

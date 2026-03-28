@@ -402,4 +402,126 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get ecoFieldCaptureRejectedCrop => 'Unable to generate AI crop.';
+
+  @override
+  String analysisPcaError(Object error) {
+    return 'Error calculating PCA: $error';
+  }
+
+  @override
+  String get analysisTitle => 'Analysis Results';
+
+  @override
+  String get analysisNavTable => 'Table';
+
+  @override
+  String get analysisNavSave => 'Save';
+
+  @override
+  String get analysisWireframesSection => 'Deformation wireframes ±2SD';
+
+  @override
+  String get analysisNoComponents =>
+      'Unable to calculate principal components.';
+
+  @override
+  String get analysisScoresSection => 'Scores Table';
+
+  @override
+  String get analysisInterpretationSection => 'Interpretation and save';
+
+  @override
+  String get analysisInterpretationHint =>
+      'e.g. PC1: corolla opening; PC2: curvature; PC3: basal variation...';
+
+  @override
+  String get analysisSaveWithInterpretation => 'Save with interpretation';
+
+  @override
+  String analysisWireframeMeanLabel(Object title) {
+    return 'Mean · $title';
+  }
+
+  @override
+  String get analysisNoInterpretation => 'No interpretation';
+
+  @override
+  String get analysisCsvHeaderImage => 'Image';
+
+  @override
+  String get analysisCsvHeaderInterpretation => 'Interpretation';
+
+  @override
+  String analysisExportedBoth(Object csvFile, Object jsonFile) {
+    return 'Exported: $csvFile and $jsonFile';
+  }
+
+  @override
+  String analysisExportedSingle(Object csvFile) {
+    return 'Exported: $csvFile';
+  }
+
+  @override
+  String get analysisShareSubject => 'Edge AI Morphometrics - analysis';
+
+  @override
+  String get analysisShareText => 'Files exported from Theia';
+
+  @override
+  String analysisShareError(Object error) {
+    return 'Could not share files: $error';
+  }
+
+  @override
+  String get analysisHcdaiNote =>
+      '🧠 HCDAI Note:\nWireframes show hypothetical ±2SD deformations over the mean shape.\nInterpret them biologically (opening, curvature, symmetry) by comparing with real specimens.';
+
+  @override
+  String get morphTitle => 'Morphospace (PC1 vs PC2)';
+
+  @override
+  String get morphClearSelectionTooltip => 'Clear selection';
+
+  @override
+  String get morphAxisLabel => 'PC1 (X Axis)  /  PC2 (Y Axis)';
+
+  @override
+  String get specimenViewerMean => 'Mean';
+
+  @override
+  String get specimenViewerSpecimen => 'Specimen';
+
+  @override
+  String get specimenViewerOverlay => 'Overlay';
+
+  @override
+  String get dmSelectFileFirst => 'Select a file first.';
+
+  @override
+  String dmShareError(Object error) {
+    return 'Could not share: $error';
+  }
+
+  @override
+  String get dmAnalysisJsonNotFound => 'Analysis JSON was not found to open.';
+
+  @override
+  String dmOpenAnalysisError(Object error) {
+    return 'Could not open analysis: $error';
+  }
+
+  @override
+  String get dmInvalidJsonFormat => 'Invalid JSON format';
+
+  @override
+  String get dmExpectedJsonObject => 'Expected a JSON object';
+
+  @override
+  String get dmExpectedMatrixList => 'Expected matrix in list format';
+
+  @override
+  String get dmEmptyMatrix => 'Empty matrix';
+
+  @override
+  String get dmExpectedMatricesList => 'Expected list of matrices';
 }

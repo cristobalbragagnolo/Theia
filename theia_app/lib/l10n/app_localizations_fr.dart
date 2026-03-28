@@ -314,7 +314,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get infoAcknowledgementsBody =>
-      'Los algoritmos de DeepLearning de esta aplicación, como la ciencia en general, están construidas sobre el trabajo que hicieron otras personas antes que nosotros. Por eso quiero agradecer a Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares y Andrés Ferreira Rodríguez por su trabajo en anotación y su gran apoyo.\n\nEsta app esta hecha con amor, curiosidad y mucho trabajo. Por lo cual quiero agradecerles a mis padres y mi familia que me inculcaron esos valores.\n\nEspero que esta herramienta sirva para la investigación científica y ayude a los que vienen luego a descubrir e inventar cosas aun mejores.';
+      'Les algorithmes de deep learning de cette application, comme la science en général, reposent sur le travail de celles et ceux qui nous ont précédés. C’est pourquoi je tiens à remercier Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares et Andrés Ferreira Rodríguez pour leur travail d’annotation et leur formidable soutien.\n\nCette application a été créée avec amour, curiosité et beaucoup de travail. Je souhaite donc remercier mes parents et ma famille de m’avoir transmis ces valeurs.\n\nJ’espère que cet outil sera utile à la recherche scientifique et aidera celles et ceux qui viendront après nous à découvrir et inventer des choses encore meilleures.';
 
   @override
   String get appTaglineShort => 'Edge AI Morphometrics';
@@ -404,4 +404,129 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get ecoFieldCaptureRejectedCrop => 'Impossible de générer le crop IA.';
+
+  @override
+  String analysisPcaError(Object error) {
+    return 'Erreur lors du calcul de l’ACP : $error';
+  }
+
+  @override
+  String get analysisTitle => 'Résultats de l’analyse';
+
+  @override
+  String get analysisNavTable => 'Tableau';
+
+  @override
+  String get analysisNavSave => 'Enregistrer';
+
+  @override
+  String get analysisWireframesSection => 'Wireframes de déformation ±2ET';
+
+  @override
+  String get analysisNoComponents =>
+      'Impossible de calculer les composantes principales.';
+
+  @override
+  String get analysisScoresSection => 'Tableau des scores';
+
+  @override
+  String get analysisInterpretationSection =>
+      'Interprétation et enregistrement';
+
+  @override
+  String get analysisInterpretationHint =>
+      'ex. : PC1 : ouverture corollaire ; PC2 : courbure ; PC3 : variation basale...';
+
+  @override
+  String get analysisSaveWithInterpretation =>
+      'Enregistrer avec interprétation';
+
+  @override
+  String analysisWireframeMeanLabel(Object title) {
+    return 'Moyenne · $title';
+  }
+
+  @override
+  String get analysisNoInterpretation => 'Sans interprétation';
+
+  @override
+  String get analysisCsvHeaderImage => 'Image';
+
+  @override
+  String get analysisCsvHeaderInterpretation => 'Interprétation';
+
+  @override
+  String analysisExportedBoth(Object csvFile, Object jsonFile) {
+    return 'Exportés : $csvFile et $jsonFile';
+  }
+
+  @override
+  String analysisExportedSingle(Object csvFile) {
+    return 'Exporté : $csvFile';
+  }
+
+  @override
+  String get analysisShareSubject => 'Edge AI Morphometrics - analyse';
+
+  @override
+  String get analysisShareText => 'Fichiers exportés depuis Theia';
+
+  @override
+  String analysisShareError(Object error) {
+    return 'Impossible de partager les fichiers : $error';
+  }
+
+  @override
+  String get analysisHcdaiNote =>
+      '🧠 Note HCDAI :\nLes wireframes montrent des déformations hypothétiques ±2ET autour de la forme moyenne.\nInterprétez-les biologiquement (ouverture, courbure, symétrie) en les comparant à des spécimens réels.';
+
+  @override
+  String get morphTitle => 'Morphoespace (PC1 vs PC2)';
+
+  @override
+  String get morphClearSelectionTooltip => 'Effacer la sélection';
+
+  @override
+  String get morphAxisLabel => 'PC1 (Axe X)  /  PC2 (Axe Y)';
+
+  @override
+  String get specimenViewerMean => 'Moyenne';
+
+  @override
+  String get specimenViewerSpecimen => 'Spécimen';
+
+  @override
+  String get specimenViewerOverlay => 'Superposition';
+
+  @override
+  String get dmSelectFileFirst => 'Sélectionnez d’abord un fichier.';
+
+  @override
+  String dmShareError(Object error) {
+    return 'Partage impossible : $error';
+  }
+
+  @override
+  String get dmAnalysisJsonNotFound =>
+      'JSON d’analyse introuvable pour ouverture.';
+
+  @override
+  String dmOpenAnalysisError(Object error) {
+    return 'Impossible d’ouvrir l’analyse : $error';
+  }
+
+  @override
+  String get dmInvalidJsonFormat => 'Format JSON invalide';
+
+  @override
+  String get dmExpectedJsonObject => 'Objet JSON attendu';
+
+  @override
+  String get dmExpectedMatrixList => 'Matrice attendue au format liste';
+
+  @override
+  String get dmEmptyMatrix => 'Matrice vide';
+
+  @override
+  String get dmExpectedMatricesList => 'Liste de matrices attendue';
 }

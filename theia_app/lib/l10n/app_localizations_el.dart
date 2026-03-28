@@ -314,7 +314,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get infoAcknowledgementsBody =>
-      'Los algoritmos de DeepLearning de esta aplicación, como la ciencia en general, están construidas sobre el trabajo que hicieron otras personas antes que nosotros. Por eso quiero agradecer a Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares y Andrés Ferreira Rodríguez por su trabajo en anotación y su gran apoyo.\n\nEsta app esta hecha con amor, curiosidad y mucho trabajo. Por lo cual quiero agradecerles a mis padres y mi familia que me inculcaron esos valores.\n\nEspero que esta herramienta sirva para la investigación científica y ayude a los que vienen luego a descubrir e inventar cosas aun mejores.';
+      'Οι αλγόριθμοι deep learning σε αυτή την εφαρμογή, όπως και η επιστήμη γενικά, βασίζονται στο έργο όσων προηγήθηκαν από εμάς. Για αυτόν τον λόγο, θα ήθελα να ευχαριστήσω τους Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares και Andrés Ferreira Rodríguez για το έργο τους στην επισήμανση και την απίστευτη υποστήριξή τους.\n\nΑυτή η εφαρμογή δημιουργήθηκε με αγάπη, περιέργεια και πολλή δουλειά. Γι’ αυτό θέλω να εκφράσω την ευγνωμοσύνη μου στους γονείς και την οικογένειά μου που μου δίδαξαν αυτές τις αξίες.\n\nΕλπίζω αυτό το εργαλείο να αποδειχθεί χρήσιμο για την επιστημονική έρευνα και να βοηθήσει όσους έρθουν μετά από εμάς να ανακαλύψουν και να επινοήσουν ακόμη καλύτερα πράγματα.';
 
   @override
   String get appTaglineShort => 'Edge AI Morphometrics';
@@ -403,4 +403,126 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get ecoFieldCaptureRejectedCrop => 'Αδυναμία δημιουργίας IA crop.';
+
+  @override
+  String analysisPcaError(Object error) {
+    return 'Σφάλμα κατά τον υπολογισμό του PCA: $error';
+  }
+
+  @override
+  String get analysisTitle => 'Αποτελέσματα ανάλυσης';
+
+  @override
+  String get analysisNavTable => 'Πίνακας';
+
+  @override
+  String get analysisNavSave => 'Αποθήκευση';
+
+  @override
+  String get analysisWireframesSection => 'Wireframes παραμόρφωσης ±2ΤΑ';
+
+  @override
+  String get analysisNoComponents =>
+      'Δεν ήταν δυνατός ο υπολογισμός των κύριων συνιστωσών.';
+
+  @override
+  String get analysisScoresSection => 'Πίνακας βαθμολογιών';
+
+  @override
+  String get analysisInterpretationSection => 'Ερμηνεία και αποθήκευση';
+
+  @override
+  String get analysisInterpretationHint =>
+      'π.χ.: PC1: άνοιγμα στεφάνης· PC2: καμπυλότητα· PC3: βασική μεταβολή...';
+
+  @override
+  String get analysisSaveWithInterpretation => 'Αποθήκευση με ερμηνεία';
+
+  @override
+  String analysisWireframeMeanLabel(Object title) {
+    return 'Μέσος όρος · $title';
+  }
+
+  @override
+  String get analysisNoInterpretation => 'Χωρίς ερμηνεία';
+
+  @override
+  String get analysisCsvHeaderImage => 'Εικόνα';
+
+  @override
+  String get analysisCsvHeaderInterpretation => 'Ερμηνεία';
+
+  @override
+  String analysisExportedBoth(Object csvFile, Object jsonFile) {
+    return 'Εξήχθησαν: $csvFile και $jsonFile';
+  }
+
+  @override
+  String analysisExportedSingle(Object csvFile) {
+    return 'Εξήχθη: $csvFile';
+  }
+
+  @override
+  String get analysisShareSubject => 'Edge AI Morphometrics - ανάλυση';
+
+  @override
+  String get analysisShareText => 'Αρχεία που εξήχθησαν από το Theia';
+
+  @override
+  String analysisShareError(Object error) {
+    return 'Δεν ήταν δυνατή η κοινοποίηση των αρχείων: $error';
+  }
+
+  @override
+  String get analysisHcdaiNote =>
+      '🧠 Σημείωση HCDAI:\nΤα wireframes δείχνουν υποθετικές παραμορφώσεις ±2ΤΑ πάνω στο μέσο σχήμα.\nΕρμηνεύστε τις βιολογικά (άνοιγμα, καμπυλότητα, συμμετρία) συγκρίνοντας με πραγματικά δείγματα.';
+
+  @override
+  String get morphTitle => 'Μορφόχωρος (PC1 vs PC2)';
+
+  @override
+  String get morphClearSelectionTooltip => 'Καθαρισμός επιλογής';
+
+  @override
+  String get morphAxisLabel => 'PC1 (Άξονας X)  /  PC2 (Άξονας Y)';
+
+  @override
+  String get specimenViewerMean => 'Μέσος όρος';
+
+  @override
+  String get specimenViewerSpecimen => 'Δείγμα';
+
+  @override
+  String get specimenViewerOverlay => 'Επικάλυψη';
+
+  @override
+  String get dmSelectFileFirst => 'Επίλεξε πρώτα ένα αρχείο.';
+
+  @override
+  String dmShareError(Object error) {
+    return 'Δεν ήταν δυνατή η κοινοποίηση: $error';
+  }
+
+  @override
+  String get dmAnalysisJsonNotFound => 'Δεν βρέθηκε JSON ανάλυσης για άνοιγμα.';
+
+  @override
+  String dmOpenAnalysisError(Object error) {
+    return 'Δεν ήταν δυνατό το άνοιγμα της ανάλυσης: $error';
+  }
+
+  @override
+  String get dmInvalidJsonFormat => 'Μη έγκυρη μορφή JSON';
+
+  @override
+  String get dmExpectedJsonObject => 'Αναμενόταν αντικείμενο JSON';
+
+  @override
+  String get dmExpectedMatrixList => 'Αναμενόταν μήτρα σε μορφή λίστας';
+
+  @override
+  String get dmEmptyMatrix => 'Κενή μήτρα';
+
+  @override
+  String get dmExpectedMatricesList => 'Αναμενόταν λίστα από μήτρες';
 }

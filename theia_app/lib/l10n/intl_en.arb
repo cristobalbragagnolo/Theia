@@ -223,6 +223,41 @@
   "ecoFieldCaptureRejectedNoDetection": "Flower not detected with enough confidence.",
   "ecoFieldCaptureRejectedBlur": "Capture discarded due to blur.",
   "ecoFieldCaptureRejectedCrop": "Unable to generate AI crop.",
+  "analysisPcaError": "Error calculating PCA: {error}",
+  "analysisTitle": "Analysis Results",
+  "analysisNavTable": "Table",
+  "analysisNavSave": "Save",
+  "analysisWireframesSection": "Deformation wireframes ±2SD",
+  "analysisNoComponents": "Unable to calculate principal components.",
+  "analysisScoresSection": "Scores Table",
+  "analysisInterpretationSection": "Interpretation and save",
+  "analysisInterpretationHint": "e.g. PC1: corolla opening; PC2: curvature; PC3: basal variation...",
+  "analysisSaveWithInterpretation": "Save with interpretation",
+  "analysisWireframeMeanLabel": "Mean · {title}",
+  "analysisNoInterpretation": "No interpretation",
+  "analysisCsvHeaderImage": "Image",
+  "analysisCsvHeaderInterpretation": "Interpretation",
+  "analysisExportedBoth": "Exported: {csvFile} and {jsonFile}",
+  "analysisExportedSingle": "Exported: {csvFile}",
+  "analysisShareSubject": "Edge AI Morphometrics - analysis",
+  "analysisShareText": "Files exported from Theia",
+  "analysisShareError": "Could not share files: {error}",
+  "analysisHcdaiNote": "🧠 HCDAI Note:\nWireframes show hypothetical ±2SD deformations over the mean shape.\nInterpret them biologically (opening, curvature, symmetry) by comparing with real specimens.",
+  "morphTitle": "Morphospace (PC1 vs PC2)",
+  "morphClearSelectionTooltip": "Clear selection",
+  "morphAxisLabel": "PC1 (X Axis)  /  PC2 (Y Axis)",
+  "specimenViewerMean": "Mean",
+  "specimenViewerSpecimen": "Specimen",
+  "specimenViewerOverlay": "Overlay",
+  "dmSelectFileFirst": "Select a file first.",
+  "dmShareError": "Could not share: {error}",
+  "dmAnalysisJsonNotFound": "Analysis JSON was not found to open.",
+  "dmOpenAnalysisError": "Could not open analysis: {error}",
+  "dmInvalidJsonFormat": "Invalid JSON format",
+  "dmExpectedJsonObject": "Expected a JSON object",
+  "dmExpectedMatrixList": "Expected matrix in list format",
+  "dmEmptyMatrix": "Empty matrix",
+  "dmExpectedMatricesList": "Expected list of matrices",
   "@ecoFieldSessionReady": {
     "placeholders": {
       "session": {}
@@ -234,6 +269,42 @@
     }
   },
   "@ecoFieldCaptureSaveError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@analysisPcaError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@analysisWireframeMeanLabel": {
+    "placeholders": {
+      "title": {}
+    }
+  },
+  "@analysisExportedBoth": {
+    "placeholders": {
+      "csvFile": {},
+      "jsonFile": {}
+    }
+  },
+  "@analysisExportedSingle": {
+    "placeholders": {
+      "csvFile": {}
+    }
+  },
+  "@analysisShareError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@dmShareError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@dmOpenAnalysisError": {
     "placeholders": {
       "error": {}
     }

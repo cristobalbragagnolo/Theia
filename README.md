@@ -2,11 +2,11 @@
 
 This repository contains the official codebase, deep learning pipeline, and biological validation scripts for the manuscript submitted to ***Methods in Ecology and Evolution* (MEE)**. 
 
-Theia is a sovereign, open-source Edge AI mobile application designed to allow high-throughput geometric morphometrics in the field, eliminating the need for internet connectivity, cloud computing, or manual landmark digitization.
+Theia is an on-device, open-source Edge AI mobile application designed to allow high-throughput geometric morphometrics in the field, eliminating the need for internet connectivity, cloud computing, or manual landmark digitization.
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 To ensure frictionless reproducibility, the project is strictly modularized into four domains:
 
@@ -17,7 +17,7 @@ To ensure frictionless reproducibility, the project is strictly modularized into
 
 ---
 
-## 🚀 Reproducibility Guide
+## Reproducibility Guide
 
 ### Phase 1: Deep Learning Pipeline
 1. Download `yolo_dataset.zip` from the **Releases** tab and extract its content into `data/yolo_dataset/`.
@@ -40,7 +40,7 @@ Theia requires specific binary placement for both the analytical pipeline and th
 
 ---
 
-## 📥 Data and Weights Availability
+## Data and Weights Availability
 
 Due to repository size limits, heavy binaries are hosted in the **Releases** section. After downloading, please follow this mapping:
 
@@ -49,6 +49,14 @@ Due to repository size limits, heavy binaries are hosted in the **Releases** sec
 | **`yolo_dataset.zip`** | `data/yolo_dataset/` |
 | **`pose_medium_fp32.tflite`** | `models_weights/` **&** `theia_app/assets/` **&** `theia_app/android/app/...` |
 | **`Theia_Release_v1.0.apk`** | (Ready-to-install Android application) |
+
+---
+
+## Acknowledgements
+
+The deep learning algorithms in this application, much like science itself, are built upon the foundational work of those who came before us. The author extends their deepest gratitude to Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares, and Andrés Ferreira Rodríguez for their meticulous work in data annotation and their unwavering intellectual support. 
+
+I also wish to thank my parents and family for instilling in me the values of curiosity, dedication, and hard work that made this project possible. It is our hope that this tool will serve the scientific community and empower future researchers to discover and build even greater solutions.
 
 ---
 *Developed for the advancement of Biology.*

@@ -9,6 +9,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ml_linalg/linalg.dart';
+import 'package:theia/l10n/app_localizations.dart';
 import 'package:theia/theme/app_tokens.dart';
 
 class SpecimenViewerScreen extends StatelessWidget {
@@ -25,6 +26,7 @@ class SpecimenViewerScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context)!;
     final scheme = Theme.of(context).colorScheme;
     final cardColor = scheme.surfaceContainerLow;
     final borderColor = scheme.outline.withValues(alpha: 0.4);
@@ -66,7 +68,7 @@ class SpecimenViewerScreen extends StatelessWidget {
         children: [
           // Media
           card(
-            'Media',
+            l.specimenViewerMean,
             CustomPaint(
               painter: _ShapePainter(
                 mean: meanShape,
@@ -80,7 +82,7 @@ class SpecimenViewerScreen extends StatelessWidget {
           ),
           // Especímen
           card(
-            'Espécimen',
+            l.specimenViewerSpecimen,
             CustomPaint(
               painter: _ShapePainter(
                 mean: meanShape,
@@ -94,7 +96,7 @@ class SpecimenViewerScreen extends StatelessWidget {
           ),
           // Superpuestos
           card(
-            'Superpuestos',
+            l.specimenViewerOverlay,
             CustomPaint(
               painter: _ShapePainter(
                 mean: meanShape,

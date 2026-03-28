@@ -312,7 +312,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get infoAcknowledgementsBody =>
-      'Los algoritmos de DeepLearning de esta aplicación, como la ciencia en general, están construidas sobre el trabajo que hicieron otras personas antes que nosotros. Por eso quiero agradecer a Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares y Andrés Ferreira Rodríguez por su trabajo en anotación y su gran apoyo.\n\nEsta app esta hecha con amor, curiosidad y mucho trabajo. Por lo cual quiero agradecerles a mis padres y mi familia que me inculcaron esos valores.\n\nEspero que esta herramienta sirva para la investigación científica y ayude a los que vienen luego a descubrir e inventar cosas aun mejores.';
+      'تعتمد خوارزميات التعلم العميق في هذا التطبيق، كما هو الحال في العلم عمومًا، على عمل من سبقونا. لذلك أود أن أشكر Mohamed (Moha) Abdelaziz و A. Jesús Muñoz-Pajares و Andrés Ferreira Rodríguez على عملهم في الوسم ودعمهم الكبير.\n\nتم إنشاء هذا التطبيق بمحبة وفضول وجهد كبير. لذلك أود أن أعبر عن امتناني لوالديّ وعائلتي لأنهم علّموني هذه القيم.\n\nآمل أن تكون هذه الأداة مفيدة للبحث العلمي وأن تساعد من يأتون بعدنا على اكتشاف وابتكار أشياء أفضل.';
 
   @override
   String get appTaglineShort => 'Edge AI Morphometrics';
@@ -402,4 +402,125 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get ecoFieldCaptureRejectedCrop => 'تعذر إنشاء قص IA.';
+
+  @override
+  String analysisPcaError(Object error) {
+    return 'خطأ أثناء حساب PCA: $error';
+  }
+
+  @override
+  String get analysisTitle => 'نتائج التحليل';
+
+  @override
+  String get analysisNavTable => 'جدول';
+
+  @override
+  String get analysisNavSave => 'حفظ';
+
+  @override
+  String get analysisWireframesSection => 'إطارات التشوه ±2SD';
+
+  @override
+  String get analysisNoComponents => 'تعذر حساب المكونات الرئيسية.';
+
+  @override
+  String get analysisScoresSection => 'جدول الدرجات';
+
+  @override
+  String get analysisInterpretationSection => 'التفسير والحفظ';
+
+  @override
+  String get analysisInterpretationHint =>
+      'مثال: PC1: انفتاح التويج؛ PC2: الانحناء؛ PC3: تباين قاعدي...';
+
+  @override
+  String get analysisSaveWithInterpretation => 'حفظ مع التفسير';
+
+  @override
+  String analysisWireframeMeanLabel(Object title) {
+    return 'المتوسط · $title';
+  }
+
+  @override
+  String get analysisNoInterpretation => 'بدون تفسير';
+
+  @override
+  String get analysisCsvHeaderImage => 'صورة';
+
+  @override
+  String get analysisCsvHeaderInterpretation => 'التفسير';
+
+  @override
+  String analysisExportedBoth(Object csvFile, Object jsonFile) {
+    return 'تم التصدير: $csvFile و $jsonFile';
+  }
+
+  @override
+  String analysisExportedSingle(Object csvFile) {
+    return 'تم التصدير: $csvFile';
+  }
+
+  @override
+  String get analysisShareSubject => 'Edge AI Morphometrics - تحليل';
+
+  @override
+  String get analysisShareText => 'ملفات مُصدّرة من Theia';
+
+  @override
+  String analysisShareError(Object error) {
+    return 'تعذر مشاركة الملفات: $error';
+  }
+
+  @override
+  String get analysisHcdaiNote =>
+      '🧠 ملاحظة HCDAI:\nتُظهر الإطارات تشوهات افتراضية بمقدار ±2SD حول الشكل المتوسط.\nفسّرها بيولوجيًا (الانفتاح، الانحناء، التناظر) عبر المقارنة مع عينات حقيقية.';
+
+  @override
+  String get morphTitle => 'الحيز الشكلي (PC1 مقابل PC2)';
+
+  @override
+  String get morphClearSelectionTooltip => 'مسح التحديد';
+
+  @override
+  String get morphAxisLabel => 'PC1 (المحور X)  /  PC2 (المحور Y)';
+
+  @override
+  String get specimenViewerMean => 'المتوسط';
+
+  @override
+  String get specimenViewerSpecimen => 'عينة';
+
+  @override
+  String get specimenViewerOverlay => 'تراكب';
+
+  @override
+  String get dmSelectFileFirst => 'يرجى اختيار ملف أولاً.';
+
+  @override
+  String dmShareError(Object error) {
+    return 'تعذرت المشاركة: $error';
+  }
+
+  @override
+  String get dmAnalysisJsonNotFound => 'لم يتم العثور على JSON التحليل لفتحه.';
+
+  @override
+  String dmOpenAnalysisError(Object error) {
+    return 'تعذر فتح التحليل: $error';
+  }
+
+  @override
+  String get dmInvalidJsonFormat => 'تنسيق JSON غير صالح';
+
+  @override
+  String get dmExpectedJsonObject => 'كان من المتوقع كائن JSON';
+
+  @override
+  String get dmExpectedMatrixList => 'كان من المتوقع مصفوفة بصيغة قائمة';
+
+  @override
+  String get dmEmptyMatrix => 'مصفوفة فارغة';
+
+  @override
+  String get dmExpectedMatricesList => 'كان من المتوقع قائمة من المصفوفات';
 }

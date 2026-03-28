@@ -236,5 +236,77 @@
     "placeholders": {
       "error": {}
     }
+  },
+  "analysisPcaError": "Σφάλμα κατά τον υπολογισμό του PCA: {error}",
+  "analysisTitle": "Αποτελέσματα ανάλυσης",
+  "analysisNavTable": "Πίνακας",
+  "analysisNavSave": "Αποθήκευση",
+  "analysisWireframesSection": "Wireframes παραμόρφωσης ±2ΤΑ",
+  "analysisNoComponents": "Δεν ήταν δυνατός ο υπολογισμός των κύριων συνιστωσών.",
+  "analysisScoresSection": "Πίνακας βαθμολογιών",
+  "analysisInterpretationSection": "Ερμηνεία και αποθήκευση",
+  "analysisInterpretationHint": "π.χ.: PC1: άνοιγμα στεφάνης· PC2: καμπυλότητα· PC3: βασική μεταβολή...",
+  "analysisSaveWithInterpretation": "Αποθήκευση με ερμηνεία",
+  "analysisWireframeMeanLabel": "Μέσος όρος · {title}",
+  "analysisNoInterpretation": "Χωρίς ερμηνεία",
+  "analysisCsvHeaderImage": "Εικόνα",
+  "analysisCsvHeaderInterpretation": "Ερμηνεία",
+  "analysisExportedBoth": "Εξήχθησαν: {csvFile} και {jsonFile}",
+  "analysisExportedSingle": "Εξήχθη: {csvFile}",
+  "analysisShareSubject": "Edge AI Morphometrics - ανάλυση",
+  "analysisShareText": "Αρχεία που εξήχθησαν από το Theia",
+  "analysisShareError": "Δεν ήταν δυνατή η κοινοποίηση των αρχείων: {error}",
+  "analysisHcdaiNote": "🧠 Σημείωση HCDAI:\nΤα wireframes δείχνουν υποθετικές παραμορφώσεις ±2ΤΑ πάνω στο μέσο σχήμα.\nΕρμηνεύστε τις βιολογικά (άνοιγμα, καμπυλότητα, συμμετρία) συγκρίνοντας με πραγματικά δείγματα.",
+  "morphTitle": "Μορφόχωρος (PC1 vs PC2)",
+  "morphClearSelectionTooltip": "Καθαρισμός επιλογής",
+  "morphAxisLabel": "PC1 (Άξονας X)  /  PC2 (Άξονας Y)",
+  "specimenViewerMean": "Μέσος όρος",
+  "specimenViewerSpecimen": "Δείγμα",
+  "specimenViewerOverlay": "Επικάλυψη",
+  "dmSelectFileFirst": "Επίλεξε πρώτα ένα αρχείο.",
+  "dmShareError": "Δεν ήταν δυνατή η κοινοποίηση: {error}",
+  "dmAnalysisJsonNotFound": "Δεν βρέθηκε JSON ανάλυσης για άνοιγμα.",
+  "dmOpenAnalysisError": "Δεν ήταν δυνατό το άνοιγμα της ανάλυσης: {error}",
+  "dmInvalidJsonFormat": "Μη έγκυρη μορφή JSON",
+  "dmExpectedJsonObject": "Αναμενόταν αντικείμενο JSON",
+  "dmExpectedMatrixList": "Αναμενόταν μήτρα σε μορφή λίστας",
+  "dmEmptyMatrix": "Κενή μήτρα",
+  "dmExpectedMatricesList": "Αναμενόταν λίστα από μήτρες",
+  "infoAcknowledgementsBody": "Οι αλγόριθμοι deep learning σε αυτή την εφαρμογή, όπως και η επιστήμη γενικά, βασίζονται στο έργο όσων προηγήθηκαν από εμάς. Για αυτόν τον λόγο, θα ήθελα να ευχαριστήσω τους Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares και Andrés Ferreira Rodríguez για το έργο τους στην επισήμανση και την απίστευτη υποστήριξή τους.\n\nΑυτή η εφαρμογή δημιουργήθηκε με αγάπη, περιέργεια και πολλή δουλειά. Γι’ αυτό θέλω να εκφράσω την ευγνωμοσύνη μου στους γονείς και την οικογένειά μου που μου δίδαξαν αυτές τις αξίες.\n\nΕλπίζω αυτό το εργαλείο να αποδειχθεί χρήσιμο για την επιστημονική έρευνα και να βοηθήσει όσους έρθουν μετά από εμάς να ανακαλύψουν και να επινοήσουν ακόμη καλύτερα πράγματα.",
+  "@analysisPcaError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@analysisWireframeMeanLabel": {
+    "placeholders": {
+      "title": {}
+    }
+  },
+  "@analysisExportedBoth": {
+    "placeholders": {
+      "csvFile": {},
+      "jsonFile": {}
+    }
+  },
+  "@analysisExportedSingle": {
+    "placeholders": {
+      "csvFile": {}
+    }
+  },
+  "@analysisShareError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@dmShareError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@dmOpenAnalysisError": {
+    "placeholders": {
+      "error": {}
+    }
   }
 }

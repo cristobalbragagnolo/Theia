@@ -313,7 +313,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get infoAcknowledgementsBody =>
-      'Los algoritmos de DeepLearning de esta aplicación, como la ciencia en general, están construidas sobre el trabajo que hicieron otras personas antes que nosotros. Por eso quiero agradecer a Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares y Andrés Ferreira Rodríguez por su trabajo en anotación y su gran apoyo.\n\nEsta app esta hecha con amor, curiosidad y mucho trabajo. Por lo cual quiero agradecerles a mis padres y mi familia que me inculcaron esos valores.\n\nEspero que esta herramienta sirva para la investigación científica y ayude a los que vienen luego a descubrir e inventar cosas aun mejores.';
+      'Bu uygulamadaki derin öğrenme algoritmaları, genel olarak bilimde olduğu gibi, bizden önce gelenlerin çalışmalarının üzerine kuruludur. Bu nedenle Mohamed (Moha) Abdelaziz’e, A. Jesús Muñoz-Pajares’e ve Andrés Ferreira Rodríguez’e etiketleme çalışmaları ve inanılmaz destekleri için teşekkür etmek istiyorum.\n\nBu uygulama sevgi, merak ve çok emekle oluşturuldu. Bu nedenle bu değerleri bana öğreten aileme ve ebeveynlerime teşekkür etmek istiyorum.\n\nBu aracın bilimsel araştırmalar için faydalı olmasını ve bizden sonra gelenlerin daha da iyi şeyler keşfetmesine ve icat etmesine yardımcı olmasını umuyorum.';
 
   @override
   String get appTaglineShort => 'Edge AI Morphometrics';
@@ -403,4 +403,126 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get ecoFieldCaptureRejectedCrop => 'IA kırpması oluşturulamadı.';
+
+  @override
+  String analysisPcaError(Object error) {
+    return 'PCA hesaplanırken hata: $error';
+  }
+
+  @override
+  String get analysisTitle => 'Analiz Sonuçları';
+
+  @override
+  String get analysisNavTable => 'Tablo';
+
+  @override
+  String get analysisNavSave => 'Kaydet';
+
+  @override
+  String get analysisWireframesSection => 'Deformasyon tel kafesleri ±2SS';
+
+  @override
+  String get analysisNoComponents => 'Temel bileşenler hesaplanamadı.';
+
+  @override
+  String get analysisScoresSection => 'Skor Tablosu';
+
+  @override
+  String get analysisInterpretationSection => 'Yorumlama ve kaydetme';
+
+  @override
+  String get analysisInterpretationHint =>
+      'örn.: PC1: taç açıklığı; PC2: eğrilik; PC3: bazal varyasyon...';
+
+  @override
+  String get analysisSaveWithInterpretation => 'Yorumla birlikte kaydet';
+
+  @override
+  String analysisWireframeMeanLabel(Object title) {
+    return 'Ortalama · $title';
+  }
+
+  @override
+  String get analysisNoInterpretation => 'Yorum yok';
+
+  @override
+  String get analysisCsvHeaderImage => 'Görüntü';
+
+  @override
+  String get analysisCsvHeaderInterpretation => 'Yorum';
+
+  @override
+  String analysisExportedBoth(Object csvFile, Object jsonFile) {
+    return 'Dışa aktarıldı: $csvFile ve $jsonFile';
+  }
+
+  @override
+  String analysisExportedSingle(Object csvFile) {
+    return 'Dışa aktarıldı: $csvFile';
+  }
+
+  @override
+  String get analysisShareSubject => 'Edge AI Morphometrics - analiz';
+
+  @override
+  String get analysisShareText => 'Theia’dan dışa aktarılan dosyalar';
+
+  @override
+  String analysisShareError(Object error) {
+    return 'Dosyalar paylaşılamadı: $error';
+  }
+
+  @override
+  String get analysisHcdaiNote =>
+      '🧠 HCDAI Notu:\nTel kafesler, ortalama şekil üzerinde varsayımsal ±2SS deformasyonları gösterir.\nBunları gerçek örneklerle karşılaştırarak biyolojik olarak yorumlayın (açılma, eğrilik, simetri).';
+
+  @override
+  String get morphTitle => 'Morfouzay (PC1 vs PC2)';
+
+  @override
+  String get morphClearSelectionTooltip => 'Seçimi temizle';
+
+  @override
+  String get morphAxisLabel => 'PC1 (X Ekseni)  /  PC2 (Y Ekseni)';
+
+  @override
+  String get specimenViewerMean => 'Ortalama';
+
+  @override
+  String get specimenViewerSpecimen => 'Örnek';
+
+  @override
+  String get specimenViewerOverlay => 'Üst üste';
+
+  @override
+  String get dmSelectFileFirst => 'Önce bir dosya seçin.';
+
+  @override
+  String dmShareError(Object error) {
+    return 'Paylaşılamadı: $error';
+  }
+
+  @override
+  String get dmAnalysisJsonNotFound =>
+      'Açılacak analiz JSON dosyası bulunamadı.';
+
+  @override
+  String dmOpenAnalysisError(Object error) {
+    return 'Analiz açılamadı: $error';
+  }
+
+  @override
+  String get dmInvalidJsonFormat => 'Geçersiz JSON biçimi';
+
+  @override
+  String get dmExpectedJsonObject => 'JSON nesnesi bekleniyordu';
+
+  @override
+  String get dmExpectedMatrixList => 'Liste biçiminde matris bekleniyordu';
+
+  @override
+  String get dmEmptyMatrix => 'Boş matris';
+
+  @override
+  String get dmExpectedMatricesList => 'Matris listesi bekleniyordu';
 }

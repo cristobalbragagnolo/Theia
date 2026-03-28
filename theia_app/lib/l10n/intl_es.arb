@@ -223,6 +223,41 @@
   "ecoFieldCaptureRejectedNoDetection": "No se detectó flor con confianza suficiente.",
   "ecoFieldCaptureRejectedBlur": "Captura descartada por desenfoque.",
   "ecoFieldCaptureRejectedCrop": "No se pudo generar el recorte IA.",
+  "analysisPcaError": "Error al calcular PCA: {error}",
+  "analysisTitle": "Resultados del Análisis",
+  "analysisNavTable": "Tabla",
+  "analysisNavSave": "Guardar",
+  "analysisWireframesSection": "Wireframes de deformación  ±2DE",
+  "analysisNoComponents": "No fue posible calcular componentes principales.",
+  "analysisScoresSection": "Tabla de Scores",
+  "analysisInterpretationSection": "Interpretación y guardado",
+  "analysisInterpretationHint": "Ej.: PC1: apertura corolar; PC2: curvatura; PC3: variación basal...",
+  "analysisSaveWithInterpretation": "Guardar con interpretación",
+  "analysisWireframeMeanLabel": "Media · {title}",
+  "analysisNoInterpretation": "Sin interpretación",
+  "analysisCsvHeaderImage": "Imagen",
+  "analysisCsvHeaderInterpretation": "Interpretación",
+  "analysisExportedBoth": "Exportados: {csvFile} y {jsonFile}",
+  "analysisExportedSingle": "Exportado: {csvFile}",
+  "analysisShareSubject": "Edge AI Morphometrics - análisis",
+  "analysisShareText": "Archivos exportados desde Theia",
+  "analysisShareError": "No se pudieron compartir los archivos: {error}",
+  "analysisHcdaiNote": "🧠 Nota HCDAI:\nLos wireframes muestran deformaciones hipotéticas ±2DE sobre la forma media.\nInterprétalas biológicamente (apertura, curvatura, simetría) comparando con especímenes reales.",
+  "morphTitle": "Morfoespacio (PC1 vs PC2)",
+  "morphClearSelectionTooltip": "Limpiar selección",
+  "morphAxisLabel": "PC1 (Eje X)  /  PC2 (Eje Y)",
+  "specimenViewerMean": "Media",
+  "specimenViewerSpecimen": "Espécimen",
+  "specimenViewerOverlay": "Superpuestos",
+  "dmSelectFileFirst": "Selecciona un archivo primero.",
+  "dmShareError": "No se pudo compartir: {error}",
+  "dmAnalysisJsonNotFound": "No se encontró el JSON del análisis para abrirlo.",
+  "dmOpenAnalysisError": "No se pudo abrir el análisis: {error}",
+  "dmInvalidJsonFormat": "Formato JSON inválido",
+  "dmExpectedJsonObject": "Se esperaba un objeto JSON",
+  "dmExpectedMatrixList": "Se esperaba matriz en formato lista",
+  "dmEmptyMatrix": "Matriz vacía",
+  "dmExpectedMatricesList": "Se esperaba lista de matrices",
   "@ecoFieldSessionReady": {
     "placeholders": {
       "session": {}
@@ -234,6 +269,42 @@
     }
   },
   "@ecoFieldCaptureSaveError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@analysisPcaError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@analysisWireframeMeanLabel": {
+    "placeholders": {
+      "title": {}
+    }
+  },
+  "@analysisExportedBoth": {
+    "placeholders": {
+      "csvFile": {},
+      "jsonFile": {}
+    }
+  },
+  "@analysisExportedSingle": {
+    "placeholders": {
+      "csvFile": {}
+    }
+  },
+  "@analysisShareError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@dmShareError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@dmOpenAnalysisError": {
     "placeholders": {
       "error": {}
     }

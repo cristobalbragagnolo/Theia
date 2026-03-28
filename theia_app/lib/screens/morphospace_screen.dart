@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:ml_linalg/linalg.dart' hide Axis;
+import 'package:theia/l10n/app_localizations.dart';
 import 'package:theia/theme/app_tokens.dart';
 import 'package:theia/widgets/theia_toolbar_action.dart';
 import 'specimen_viewer_screen.dart';
@@ -51,7 +52,9 @@ class _MorphospaceScreenState extends State<MorphospaceScreen> {
 
   void _viewSpecimen(int index) {
     if (index < 0 || index >= widget.pcaScores.length) return;
-    final String name = widget.pcaScores[index]['image_name'] ?? 'Espécimen';
+    final l = AppLocalizations.of(context)!;
+    final String name =
+        widget.pcaScores[index]['image_name'] ?? l.specimenViewerSpecimen;
     final Matrix specimenShape = widget.alignedShapes[index];
     Navigator.push(
       context,
@@ -80,6 +83,7 @@ class _MorphospaceScreenState extends State<MorphospaceScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context)!;
     // Datos para el scatter
     final List<FlSpot> spots = widget.pcaScores.map((m) {
       return FlSpot((m['PC1'] as num).toDouble(), (m['PC2'] as num).toDouble());
@@ -122,14 +126,14 @@ class _MorphospaceScreenState extends State<MorphospaceScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const FittedBox(
+        title: FittedBox(
           fit: BoxFit.scaleDown,
-          child: Text('Morfoespacio (PC1 vs PC2)'),
+          child: Text(l.morphTitle),
         ),
         actions: [
           if (_selectedIndex != -1)
             TheiaToolbarAction(
-              tooltip: 'Limpiar selección',
+              tooltip: l.morphClearSelectionTooltip,
               icon: Icons.highlight_off,
               onPressed: () => setState(() => _selectedIndex = -1),
             ),
@@ -180,7 +184,7 @@ class _MorphospaceScreenState extends State<MorphospaceScreen> {
                         sideTitles: SideTitles(showTitles: false)),
                     bottomTitles: AxisTitles(
                       axisNameWidget: Text(
-                        'PC1 (Eje X)  /  PC2 (Eje Y)',
+                        l.morphAxisLabel,
                         style: TextStyle(color: onSurface),
                       ),
                       sideTitles: SideTitles(
@@ -253,6 +257,7 @@ class _MorphospaceScreenState extends State<MorphospaceScreen> {
           // ====== TABLA (solo PC1 y PC2) ======
           Expanded(
             child: _buildScoresTable(
+              imageHeader: l.analysisCsvHeaderImage,
               headerPc1: hdr('PC1', 0),
               headerPc2: hdr('PC2', 1),
             ),
@@ -264,7 +269,9 @@ class _MorphospaceScreenState extends State<MorphospaceScreen> {
 
   // ======= Tabla con selección bidireccional (sin checkbox) =======
   Widget _buildScoresTable(
-      {required String headerPc1, required String headerPc2}) {
+      {required String imageHeader,
+      required String headerPc1,
+      required String headerPc2}) {
     final rows = widget.pcaScores;
 
     return SingleChildScrollView(
@@ -272,7 +279,7 @@ class _MorphospaceScreenState extends State<MorphospaceScreen> {
       child: DataTable(
         showCheckboxColumn: false, // << sin checkboxes
         columns: [
-          const DataColumn(label: Text('Imagen')),
+          DataColumn(label: Text(imageHeader)),
           DataColumn(label: Text(headerPc1), numeric: true),
           DataColumn(label: Text(headerPc2), numeric: true),
         ],

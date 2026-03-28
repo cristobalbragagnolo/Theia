@@ -236,5 +236,77 @@
     "placeholders": {
       "error": {}
     }
+  },
+  "analysisPcaError": "Ошибка при вычислении PCA: {error}",
+  "analysisTitle": "Результаты анализа",
+  "analysisNavTable": "Таблица",
+  "analysisNavSave": "Сохранить",
+  "analysisWireframesSection": "Каркасы деформаций ±2СО",
+  "analysisNoComponents": "Не удалось вычислить главные компоненты.",
+  "analysisScoresSection": "Таблица оценок",
+  "analysisInterpretationSection": "Интерпретация и сохранение",
+  "analysisInterpretationHint": "напр.: PC1: раскрытие венчика; PC2: кривизна; PC3: базальная вариация...",
+  "analysisSaveWithInterpretation": "Сохранить с интерпретацией",
+  "analysisWireframeMeanLabel": "Среднее · {title}",
+  "analysisNoInterpretation": "Без интерпретации",
+  "analysisCsvHeaderImage": "Изображение",
+  "analysisCsvHeaderInterpretation": "Интерпретация",
+  "analysisExportedBoth": "Экспортировано: {csvFile} и {jsonFile}",
+  "analysisExportedSingle": "Экспортировано: {csvFile}",
+  "analysisShareSubject": "Edge AI Morphometrics - анализ",
+  "analysisShareText": "Файлы экспортированы из Theia",
+  "analysisShareError": "Не удалось поделиться файлами: {error}",
+  "analysisHcdaiNote": "🧠 Заметка HCDAI:\nКаркасы показывают гипотетические деформации ±2СО относительно средней формы.\nИнтерпретируйте их биологически (раскрытие, кривизна, симметрия), сравнивая с реальными образцами.",
+  "morphTitle": "Морфопространство (PC1 vs PC2)",
+  "morphClearSelectionTooltip": "Очистить выбор",
+  "morphAxisLabel": "PC1 (Ось X)  /  PC2 (Ось Y)",
+  "specimenViewerMean": "Среднее",
+  "specimenViewerSpecimen": "Образец",
+  "specimenViewerOverlay": "Наложение",
+  "dmSelectFileFirst": "Сначала выберите файл.",
+  "dmShareError": "Не удалось поделиться: {error}",
+  "dmAnalysisJsonNotFound": "JSON анализа для открытия не найден.",
+  "dmOpenAnalysisError": "Не удалось открыть анализ: {error}",
+  "dmInvalidJsonFormat": "Неверный формат JSON",
+  "dmExpectedJsonObject": "Ожидался объект JSON",
+  "dmExpectedMatrixList": "Ожидалась матрица в формате списка",
+  "dmEmptyMatrix": "Пустая матрица",
+  "dmExpectedMatricesList": "Ожидался список матриц",
+  "infoAcknowledgementsBody": "Алгоритмы глубокого обучения в этом приложении, как и наука в целом, основаны на работе тех, кто был до нас. Поэтому я хочу поблагодарить Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares и Andrés Ferreira Rodríguez за их работу по аннотированию и невероятную поддержку.\n\nЭто приложение создано с любовью, любопытством и большим трудом. Поэтому я хочу выразить благодарность моим родителям и семье за то, что они привили мне эти ценности.\n\nНадеюсь, этот инструмент окажется полезным для научных исследований и поможет тем, кто придёт после нас, открыть и изобрести ещё более совершенные вещи.",
+  "@analysisPcaError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@analysisWireframeMeanLabel": {
+    "placeholders": {
+      "title": {}
+    }
+  },
+  "@analysisExportedBoth": {
+    "placeholders": {
+      "csvFile": {},
+      "jsonFile": {}
+    }
+  },
+  "@analysisExportedSingle": {
+    "placeholders": {
+      "csvFile": {}
+    }
+  },
+  "@analysisShareError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@dmShareError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@dmOpenAnalysisError": {
+    "placeholders": {
+      "error": {}
+    }
   }
 }

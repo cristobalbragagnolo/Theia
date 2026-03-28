@@ -35,6 +35,8 @@ class AnalysisResultScreen extends StatefulWidget {
   final Vector pc1Eigenvector; // legado
   final Vector pc2Eigenvector; // legado
   final String selectedFileName; // nombre del CSV fuente
+  final String? workingDatasetRoot; // dataset activo para export de análisis
+  final String? workingRunTag; // run activo (Axx) para sobrescritura
   final Map<String, String> plotUrls; // sin uso
   final String serverUrl; // sin uso
 
@@ -47,6 +49,8 @@ class AnalysisResultScreen extends StatefulWidget {
     required this.pc1Eigenvector,
     required this.pc2Eigenvector,
     required this.selectedFileName,
+    this.workingDatasetRoot,
+    this.workingRunTag,
     required this.plotUrls,
     required this.serverUrl,
   });
@@ -84,8 +88,9 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
     } catch (e) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (!mounted) return;
+        final l = AppLocalizations.of(context)!;
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Error al calcular PCA: $e')),
+          SnackBar(content: Text(l.analysisPcaError('$e'))),
         );
       });
     }
@@ -93,6 +98,7 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context)!;
     if (_pca == null) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
@@ -138,7 +144,7 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
     final Color meanColor = scheme.primary.withValues(alpha: 0.95);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Resultados del Análisis')),
+      appBar: AppBar(title: Text(l.analysisTitle)),
       bottomNavigationBar: BottomAppBar(
         elevation: 6,
         child: Padding(
@@ -154,7 +160,7 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
                   onTap: () => _jumpTo(_wireframesKey)),
               TheiaNavTextButton(
                   icon: Icons.table_chart,
-                  label: 'Tabla',
+                  label: l.analysisNavTable,
                   onTap: () => _jumpTo(_tableKey)),
               TheiaNavTextButton(
                 icon: Icons.scatter_plot,
@@ -174,7 +180,7 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
               ),
               TheiaNavTextButton(
                   icon: Icons.save_alt,
-                  label: 'Guardar',
+                  label: l.analysisNavSave,
                   onTap: () => _jumpTo(_interpretKey)),
             ],
           ),
@@ -193,14 +199,14 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
                 AppSpacing.md,
                 0,
               ),
-              child: _sectionTitle('Wireframes de deformación  ±2DE ',
+              child: _sectionTitle(l.analysisWireframesSection,
                   key: _wireframesKey),
             ),
 
             if (wireframes.isEmpty)
-              const Padding(
-                padding: EdgeInsets.all(AppSpacing.lg),
-                child: Text('No fue posible calcular componentes principales.'),
+              Padding(
+                padding: const EdgeInsets.all(AppSpacing.lg),
+                child: Text(l.analysisNoComponents),
               )
             else ...[
               for (final wf in wireframes)
@@ -246,7 +252,7 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
                 AppSpacing.md,
                 0,
               ),
-              child: _sectionTitle('Tabla de Scores', key: _tableKey),
+              child: _sectionTitle(l.analysisScoresSection, key: _tableKey),
             ),
             TheiaPagePadding(
               padding: const EdgeInsets.fromLTRB(
@@ -267,7 +273,7 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
             // ===== Interpretación / Guardado =====
             TheiaPagePadding(
               padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
-              child: _sectionTitle('Interpretación y guardado',
+              child: _sectionTitle(l.analysisInterpretationSection,
                   key: _interpretKey),
             ),
             TheiaPagePadding(
@@ -281,8 +287,7 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
                 controller: _interpCtrl,
                 maxLines: 5,
                 decoration: TheiaInputDecoration.outlined(
-                  hintText:
-                      'Ej.: PC1: apertura corolar; PC2: curvatura; PC3: variación basal...',
+                  hintText: l.analysisInterpretationHint,
                 ),
               ),
             ),
@@ -305,7 +310,7 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
                         },
                         minHeight: AppSizes.buttonHeight,
                         icon: Icons.save_alt,
-                        label: 'Guardar con interpretación',
+                        label: l.analysisSaveWithInterpretation,
                       ),
                       const SizedBox(height: AppSpacing.md - 2),
                       TheiaPrimaryButton(
@@ -314,7 +319,7 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
                         },
                         minHeight: AppSizes.buttonHeight,
                         icon: Icons.share,
-                        label: AppLocalizations.of(context)!.shareExport,
+                        label: l.shareExport,
                       ),
                     ],
                   ),
@@ -365,6 +370,7 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
     required List<double> explainedPct,
     required int componentCount,
   }) {
+    final l = AppLocalizations.of(context)!;
     final hdrTop = Theme.of(context).textTheme.titleSmall;
     final hdrPct = Theme.of(context).textTheme.bodyMedium?.copyWith(
           color: Theme.of(context)
@@ -388,7 +394,7 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
     final minW =
         MediaQuery.of(context).size.width - 24; // padding lateral 12+12
     final columns = <DataColumn>[
-      DataColumn(label: twoLineHeader('Imagen', '')),
+      DataColumn(label: twoLineHeader(l.analysisCsvHeaderImage, '')),
     ];
     for (var idx = 0; idx < componentCount; idx++) {
       final pctLabel = idx < explainedPct.length
@@ -440,6 +446,7 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
     required Color defColor,
     required Color meanColor,
   }) {
+    final l = AppLocalizations.of(context)!;
     final captionStyle = Theme.of(context).textTheme.bodySmall;
     return Padding(
       padding: const EdgeInsets.symmetric(
@@ -492,7 +499,8 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
               Expanded(child: Center(child: Text('−2DE', style: captionStyle))),
               Expanded(
                 child: Center(
-                  child: Text('Media · $title', style: captionStyle),
+                  child: Text(l.analysisWireframeMeanLabel(title),
+                      style: captionStyle),
                 ),
               ),
               Expanded(child: Center(child: Text('+2DE', style: captionStyle))),
@@ -548,15 +556,15 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
 
   // ---------- Guardar CSV ----------
   Future<List<String>> _exportCsv({bool showSnack = true}) async {
+    final l = AppLocalizations.of(context)!;
     final dir = await getApplicationDocumentsDirectory();
 
-    final sourceFileName =
-        widget.selectedFileName.toLowerCase().endsWith('.csv')
-            ? widget.selectedFileName
-            : '${widget.selectedFileName}.csv';
-    final datasetRoot = _datasetRootFromSource(sourceFileName);
-    final nextRunIndex = await _nextAnalysisRunIndex(dir, datasetRoot);
-    final runTag = _analysisRunTag(nextRunIndex);
+    final sourceFileName = widget.selectedFileName.contains('.')
+        ? widget.selectedFileName
+        : '${widget.selectedFileName}.csv';
+    final datasetRoot =
+        widget.workingDatasetRoot ?? _datasetRootFromSource(sourceFileName);
+    final runTag = widget.workingRunTag ?? _runTagFromSource(sourceFileName);
 
     final outName = '${datasetRoot}__ANL_$runTag.csv';
     final outPath = '${dir.path}/$outName';
@@ -569,18 +577,18 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
             .map((v) => v * 100.0)
             .toList();
     final interp = _interpCtrl.text.trim().isEmpty
-        ? 'Sin interpretación'
+        ? l.analysisNoInterpretation
         : _interpCtrl.text.trim();
     final names =
         widget.pcaScores.map((m) => m['image_name']?.toString() ?? '').toList();
 
     final rows = <List<dynamic>>[];
     rows.add([
-      'Imagen',
+      l.analysisCsvHeaderImage,
       'PC1 (${explainedPct[0].toStringAsFixed(1)}%)',
       'PC2 (${explainedPct[1].toStringAsFixed(1)}%)',
       'PC3 (${explainedPct[2].toStringAsFixed(1)}%)',
-      'Interpretación'
+      l.analysisCsvHeaderInterpretation
     ]);
 
     for (var i = 0; i < names.length && i < scores.rowCount; i++) {
@@ -609,8 +617,8 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
 
     if (mounted && showSnack) {
       final msg = jsonPath != null
-          ? 'Exportados: $outName y ${jsonPath.split('/').last}'
-          : 'Exportado: $outName';
+          ? l.analysisExportedBoth(outName, jsonPath.split('/').last)
+          : l.analysisExportedSingle(outName);
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
     }
 
@@ -679,54 +687,49 @@ class _AnalysisResultScreenState extends State<AnalysisResultScreen> {
   }
 
   String _datasetRootFromSource(String sourceFileName) {
-    final noExt = sourceFileName.toLowerCase().endsWith('.csv')
-        ? sourceFileName.substring(0, sourceFileName.length - 4)
+    final lower = sourceFileName.toLowerCase();
+    final noExt = lower.endsWith('.csv') || lower.endsWith('.json')
+        ? sourceFileName.substring(0, sourceFileName.lastIndexOf('.'))
         : sourceFileName;
     if (noExt.toLowerCase().endsWith('__lm')) {
       return noExt.substring(0, noExt.length - 4);
     }
+    final anlMatch =
+        RegExp(r'^(.*)__ANL_A\d{2}$', caseSensitive: false).firstMatch(noExt);
+    if (anlMatch != null) {
+      return anlMatch.group(1)!;
+    }
     return noExt;
   }
 
-  String _analysisRunTag(int index) => 'A${index.toString().padLeft(2, '0')}';
-
-  Future<int> _nextAnalysisRunIndex(Directory dir, String datasetRoot) async {
-    final escapedRoot = RegExp.escape(datasetRoot);
-    final pattern = RegExp(
-      '^${escapedRoot}__ANL_A(\\d{2})\\.(csv|json)\$',
-      caseSensitive: false,
-    );
-
-    var maxRun = 0;
-    final entries = dir.listSync();
-    for (final entry in entries) {
-      if (entry is! File) continue;
-      final name = entry.uri.pathSegments.last;
-      final match = pattern.firstMatch(name);
-      if (match == null) continue;
-      final run = int.tryParse(match.group(1) ?? '');
-      if (run != null && run > maxRun) {
-        maxRun = run;
-      }
+  String _runTagFromSource(String sourceFileName) {
+    final noExt = sourceFileName.contains('.')
+        ? sourceFileName.substring(0, sourceFileName.lastIndexOf('.'))
+        : sourceFileName;
+    final match =
+        RegExp(r'__ANL_(A\d{2})$', caseSensitive: false).firstMatch(noExt);
+    if (match != null) {
+      return match.group(1)!.toUpperCase();
     }
-    return maxRun + 1;
+    return 'A01';
   }
 
   Future<void> _shareExportFiles() async {
+    final l = AppLocalizations.of(context)!;
     try {
       final paths = await _exportCsv(showSnack: false);
       if (paths.isEmpty) return;
       final files = paths.map((p) => XFile(p)).toList();
       await Share.shareXFiles(
         files,
-        subject: 'Edge AI Morphometrics - análisis',
-        text: 'Archivos exportados desde Theia',
+        subject: l.analysisShareSubject,
+        text: l.analysisShareText,
       );
     } catch (e) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('No se pudieron compartir los archivos: $e'),
+          content: Text(l.analysisShareError('$e')),
           backgroundColor: Theme.of(context).colorScheme.error,
         ),
       );
@@ -954,12 +957,11 @@ class _HcaiNote extends StatelessWidget {
   const _HcaiNote();
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context)!;
     final scheme = Theme.of(context).colorScheme;
     return TheiaSectionCard(
       child: Text(
-        '🧠 Nota HCDAI:\n'
-        'Los wireframes muestran deformaciones hipotéticas ±2DE sobre la forma media.\n'
-        'Interprétalas biológicamente (apertura, curvatura, simetría) comparando con especímenes reales.',
+        l.analysisHcdaiNote,
         style: TextStyle(
             fontSize: 13.5, color: scheme.onSurfaceVariant, height: 1.3),
       ),

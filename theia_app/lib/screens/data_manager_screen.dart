@@ -310,7 +310,7 @@ class _DataManagerScreenState extends State<DataManagerScreen>
     final file = _selectedAnalysisFile ?? _selectedLandmarkFile;
     if (file == null) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Selecciona un archivo primero.')),
+        SnackBar(content: Text(l.dmSelectFileFirst)),
       );
       return;
     }
@@ -324,7 +324,7 @@ class _DataManagerScreenState extends State<DataManagerScreen>
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('No se pudo compartir: $e'),
+          content: Text(l.dmShareError('$e')),
           backgroundColor: Theme.of(context).colorScheme.error,
         ),
       );
@@ -455,6 +455,7 @@ class _DataManagerScreenState extends State<DataManagerScreen>
       }());
 
       if (!mounted) return;
+      final selectedEntry = _classifyFile(_selectedLandmarkFile!);
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -466,6 +467,8 @@ class _DataManagerScreenState extends State<DataManagerScreen>
             pc1Eigenvector: pc1,
             pc2Eigenvector: pc2,
             selectedFileName: _selectedLandmarkFile!.uri.pathSegments.last,
+            workingDatasetRoot: selectedEntry?.datasetRoot,
+            workingRunTag: 'A01',
             plotUrls: const {},
             serverUrl: '',
           ),
@@ -499,9 +502,7 @@ class _DataManagerScreenState extends State<DataManagerScreen>
     if (jsonFile == null || !await jsonFile.exists()) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('No se encontró el JSON del análisis para abrirlo.'),
-        ),
+        SnackBar(content: Text(l.dmAnalysisJsonNotFound)),
       );
       return;
     }
@@ -511,27 +512,27 @@ class _DataManagerScreenState extends State<DataManagerScreen>
       final raw = await jsonFile.readAsString();
       final decoded = jsonDecode(raw);
       if (decoded is! Map<String, dynamic>) {
-        throw Exception('Formato JSON inválido');
+        throw Exception(l.dmInvalidJsonFormat);
       }
 
       final map = decoded;
-      final gpa = _asMap(map['gpa']);
-      final pca = _asMap(map['pca']);
+      final gpa = _asMap(map['gpa'], l);
+      final pca = _asMap(map['pca'], l);
 
-      final alignedShapes = _matricesFromDynamic(gpa['aligned_shapes']);
+      final alignedShapes = _matricesFromDynamic(gpa['aligned_shapes'], l);
       if (alignedShapes.length < 3) {
         throw Exception(l.dmNeedThree);
       }
 
-      final rawShapes = _matricesFromDynamicOrNull(map['raw_landmarks']);
+      final rawShapes = _matricesFromDynamicOrNull(map['raw_landmarks'], l);
       final meanShape = gpa.containsKey('mean_shape')
-          ? _matrixFromDynamic(gpa['mean_shape'])
+          ? _matrixFromDynamic(gpa['mean_shape'], l)
           : _meanShapeOf(alignedShapes);
 
       final loadings = pca.containsKey('loadings')
-          ? _matrixFromDynamic(pca['loadings'])
-          : _matrixFromDynamic(pca['pcs']);
-      final scores = _matrixFromDynamic(pca['scores']);
+          ? _matrixFromDynamic(pca['loadings'], l)
+          : _matrixFromDynamic(pca['pcs'], l);
+      final scores = _matrixFromDynamic(pca['scores'], l);
 
       final zeroVector = Vector.fromList(
         List<double>.filled(meanShape.rowCount * 2, 0.0),
@@ -557,7 +558,7 @@ class _DataManagerScreenState extends State<DataManagerScreen>
         pcaScores.add(sample);
       }
 
-      final meta = _asMapOrNull(map['meta']);
+      final meta = _asMapOrNull(map['meta'], l);
       final sourceFile =
           meta?['source_file']?.toString() ?? jsonFile.uri.pathSegments.last;
 
@@ -573,6 +574,8 @@ class _DataManagerScreenState extends State<DataManagerScreen>
             pc1Eigenvector: pc1,
             pc2Eigenvector: pc2,
             selectedFileName: sourceFile,
+            workingDatasetRoot: entry.datasetRoot,
+            workingRunTag: entry.runId,
             plotUrls: const {},
             serverUrl: '',
           ),
@@ -582,7 +585,7 @@ class _DataManagerScreenState extends State<DataManagerScreen>
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('No se pudo abrir el análisis: $e'),
+          content: Text(l.dmOpenAnalysisError('$e')),
           backgroundColor: Theme.of(context).colorScheme.error,
         ),
       );
@@ -619,21 +622,21 @@ class _DataManagerScreenState extends State<DataManagerScreen>
     return candidates.first;
   }
 
-  Map<String, dynamic> _asMap(dynamic value) {
+  Map<String, dynamic> _asMap(dynamic value, AppLocalizations l) {
     if (value is Map<String, dynamic>) return value;
     if (value is Map) {
       return value.map((k, v) => MapEntry(k.toString(), v));
     }
-    throw Exception('Se esperaba un objeto JSON');
+    throw Exception(l.dmExpectedJsonObject);
   }
 
-  Map<String, dynamic>? _asMapOrNull(dynamic value) {
+  Map<String, dynamic>? _asMapOrNull(dynamic value, AppLocalizations l) {
     if (value == null) return null;
-    return _asMap(value);
+    return _asMap(value, l);
   }
 
-  Matrix _matrixFromDynamic(dynamic value) {
-    if (value is! List) throw Exception('Se esperaba matriz en formato lista');
+  Matrix _matrixFromDynamic(dynamic value, AppLocalizations l) {
+    if (value is! List) throw Exception(l.dmExpectedMatrixList);
     final rows = <Vector>[];
     for (final row in value) {
       if (row is! List) continue;
@@ -641,23 +644,26 @@ class _DataManagerScreenState extends State<DataManagerScreen>
       rows.add(Vector.fromList(numeric));
     }
     if (rows.isEmpty) {
-      throw Exception('Matriz vacía');
+      throw Exception(l.dmEmptyMatrix);
     }
     return Matrix.fromRows(rows);
   }
 
-  List<Matrix> _matricesFromDynamic(dynamic value) {
-    if (value is! List) throw Exception('Se esperaba lista de matrices');
+  List<Matrix> _matricesFromDynamic(dynamic value, AppLocalizations l) {
+    if (value is! List) throw Exception(l.dmExpectedMatricesList);
     final list = <Matrix>[];
     for (final item in value) {
-      list.add(_matrixFromDynamic(item));
+      list.add(_matrixFromDynamic(item, l));
     }
     return list;
   }
 
-  List<Matrix>? _matricesFromDynamicOrNull(dynamic value) {
+  List<Matrix>? _matricesFromDynamicOrNull(
+    dynamic value,
+    AppLocalizations l,
+  ) {
     if (value == null) return null;
-    return _matricesFromDynamic(value);
+    return _matricesFromDynamic(value, l);
   }
 
   @override

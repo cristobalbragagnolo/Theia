@@ -236,5 +236,77 @@
     "placeholders": {
       "error": {}
     }
+  },
+  "analysisPcaError": "PCA hesaplanırken hata: {error}",
+  "analysisTitle": "Analiz Sonuçları",
+  "analysisNavTable": "Tablo",
+  "analysisNavSave": "Kaydet",
+  "analysisWireframesSection": "Deformasyon tel kafesleri ±2SS",
+  "analysisNoComponents": "Temel bileşenler hesaplanamadı.",
+  "analysisScoresSection": "Skor Tablosu",
+  "analysisInterpretationSection": "Yorumlama ve kaydetme",
+  "analysisInterpretationHint": "örn.: PC1: taç açıklığı; PC2: eğrilik; PC3: bazal varyasyon...",
+  "analysisSaveWithInterpretation": "Yorumla birlikte kaydet",
+  "analysisWireframeMeanLabel": "Ortalama · {title}",
+  "analysisNoInterpretation": "Yorum yok",
+  "analysisCsvHeaderImage": "Görüntü",
+  "analysisCsvHeaderInterpretation": "Yorum",
+  "analysisExportedBoth": "Dışa aktarıldı: {csvFile} ve {jsonFile}",
+  "analysisExportedSingle": "Dışa aktarıldı: {csvFile}",
+  "analysisShareSubject": "Edge AI Morphometrics - analiz",
+  "analysisShareText": "Theia’dan dışa aktarılan dosyalar",
+  "analysisShareError": "Dosyalar paylaşılamadı: {error}",
+  "analysisHcdaiNote": "🧠 HCDAI Notu:\nTel kafesler, ortalama şekil üzerinde varsayımsal ±2SS deformasyonları gösterir.\nBunları gerçek örneklerle karşılaştırarak biyolojik olarak yorumlayın (açılma, eğrilik, simetri).",
+  "morphTitle": "Morfouzay (PC1 vs PC2)",
+  "morphClearSelectionTooltip": "Seçimi temizle",
+  "morphAxisLabel": "PC1 (X Ekseni)  /  PC2 (Y Ekseni)",
+  "specimenViewerMean": "Ortalama",
+  "specimenViewerSpecimen": "Örnek",
+  "specimenViewerOverlay": "Üst üste",
+  "dmSelectFileFirst": "Önce bir dosya seçin.",
+  "dmShareError": "Paylaşılamadı: {error}",
+  "dmAnalysisJsonNotFound": "Açılacak analiz JSON dosyası bulunamadı.",
+  "dmOpenAnalysisError": "Analiz açılamadı: {error}",
+  "dmInvalidJsonFormat": "Geçersiz JSON biçimi",
+  "dmExpectedJsonObject": "JSON nesnesi bekleniyordu",
+  "dmExpectedMatrixList": "Liste biçiminde matris bekleniyordu",
+  "dmEmptyMatrix": "Boş matris",
+  "dmExpectedMatricesList": "Matris listesi bekleniyordu",
+  "infoAcknowledgementsBody": "Bu uygulamadaki derin öğrenme algoritmaları, genel olarak bilimde olduğu gibi, bizden önce gelenlerin çalışmalarının üzerine kuruludur. Bu nedenle Mohamed (Moha) Abdelaziz’e, A. Jesús Muñoz-Pajares’e ve Andrés Ferreira Rodríguez’e etiketleme çalışmaları ve inanılmaz destekleri için teşekkür etmek istiyorum.\n\nBu uygulama sevgi, merak ve çok emekle oluşturuldu. Bu nedenle bu değerleri bana öğreten aileme ve ebeveynlerime teşekkür etmek istiyorum.\n\nBu aracın bilimsel araştırmalar için faydalı olmasını ve bizden sonra gelenlerin daha da iyi şeyler keşfetmesine ve icat etmesine yardımcı olmasını umuyorum.",
+  "@analysisPcaError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@analysisWireframeMeanLabel": {
+    "placeholders": {
+      "title": {}
+    }
+  },
+  "@analysisExportedBoth": {
+    "placeholders": {
+      "csvFile": {},
+      "jsonFile": {}
+    }
+  },
+  "@analysisExportedSingle": {
+    "placeholders": {
+      "csvFile": {}
+    }
+  },
+  "@analysisShareError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@dmShareError": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "@dmOpenAnalysisError": {
+    "placeholders": {
+      "error": {}
+    }
   }
 }

@@ -406,4 +406,127 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get ecoFieldCaptureRejectedCrop => 'No se pudo generar el recorte IA.';
+
+  @override
+  String analysisPcaError(Object error) {
+    return 'Error al calcular PCA: $error';
+  }
+
+  @override
+  String get analysisTitle => 'Resultados del Análisis';
+
+  @override
+  String get analysisNavTable => 'Tabla';
+
+  @override
+  String get analysisNavSave => 'Guardar';
+
+  @override
+  String get analysisWireframesSection => 'Wireframes de deformación  ±2DE';
+
+  @override
+  String get analysisNoComponents =>
+      'No fue posible calcular componentes principales.';
+
+  @override
+  String get analysisScoresSection => 'Tabla de Scores';
+
+  @override
+  String get analysisInterpretationSection => 'Interpretación y guardado';
+
+  @override
+  String get analysisInterpretationHint =>
+      'Ej.: PC1: apertura corolar; PC2: curvatura; PC3: variación basal...';
+
+  @override
+  String get analysisSaveWithInterpretation => 'Guardar con interpretación';
+
+  @override
+  String analysisWireframeMeanLabel(Object title) {
+    return 'Media · $title';
+  }
+
+  @override
+  String get analysisNoInterpretation => 'Sin interpretación';
+
+  @override
+  String get analysisCsvHeaderImage => 'Imagen';
+
+  @override
+  String get analysisCsvHeaderInterpretation => 'Interpretación';
+
+  @override
+  String analysisExportedBoth(Object csvFile, Object jsonFile) {
+    return 'Exportados: $csvFile y $jsonFile';
+  }
+
+  @override
+  String analysisExportedSingle(Object csvFile) {
+    return 'Exportado: $csvFile';
+  }
+
+  @override
+  String get analysisShareSubject => 'Edge AI Morphometrics - análisis';
+
+  @override
+  String get analysisShareText => 'Archivos exportados desde Theia';
+
+  @override
+  String analysisShareError(Object error) {
+    return 'No se pudieron compartir los archivos: $error';
+  }
+
+  @override
+  String get analysisHcdaiNote =>
+      '🧠 Nota HCDAI:\nLos wireframes muestran deformaciones hipotéticas ±2DE sobre la forma media.\nInterprétalas biológicamente (apertura, curvatura, simetría) comparando con especímenes reales.';
+
+  @override
+  String get morphTitle => 'Morfoespacio (PC1 vs PC2)';
+
+  @override
+  String get morphClearSelectionTooltip => 'Limpiar selección';
+
+  @override
+  String get morphAxisLabel => 'PC1 (Eje X)  /  PC2 (Eje Y)';
+
+  @override
+  String get specimenViewerMean => 'Media';
+
+  @override
+  String get specimenViewerSpecimen => 'Espécimen';
+
+  @override
+  String get specimenViewerOverlay => 'Superpuestos';
+
+  @override
+  String get dmSelectFileFirst => 'Selecciona un archivo primero.';
+
+  @override
+  String dmShareError(Object error) {
+    return 'No se pudo compartir: $error';
+  }
+
+  @override
+  String get dmAnalysisJsonNotFound =>
+      'No se encontró el JSON del análisis para abrirlo.';
+
+  @override
+  String dmOpenAnalysisError(Object error) {
+    return 'No se pudo abrir el análisis: $error';
+  }
+
+  @override
+  String get dmInvalidJsonFormat => 'Formato JSON inválido';
+
+  @override
+  String get dmExpectedJsonObject => 'Se esperaba un objeto JSON';
+
+  @override
+  String get dmExpectedMatrixList => 'Se esperaba matriz en formato lista';
+
+  @override
+  String get dmEmptyMatrix => 'Matriz vacía';
+
+  @override
+  String get dmExpectedMatricesList => 'Se esperaba lista de matrices';
 }

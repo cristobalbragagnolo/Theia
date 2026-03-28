@@ -72,7 +72,7 @@ import 'app_localizations_zh.dart';
 /// property.
 abstract class AppLocalizations {
   AppLocalizations(String locale)
-    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -95,11 +95,11 @@ abstract class AppLocalizations {
   /// of delegates is preferred or required.
   static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
       <LocalizationsDelegate<dynamic>>[
-        delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ];
+    delegate,
+    GlobalMaterialLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+  ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
@@ -113,7 +113,7 @@ abstract class AppLocalizations {
     Locale('de'),
     Locale('ru'),
     Locale('zh'),
-    Locale('ar'),
+    Locale('ar')
   ];
 
   /// No description provided for @appTitle.
@@ -811,6 +811,216 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'No se pudo generar el recorte IA.'**
   String get ecoFieldCaptureRejectedCrop;
+
+  /// No description provided for @analysisPcaError.
+  ///
+  /// In es, this message translates to:
+  /// **'Error al calcular PCA: {error}'**
+  String analysisPcaError(Object error);
+
+  /// No description provided for @analysisTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Resultados del Análisis'**
+  String get analysisTitle;
+
+  /// No description provided for @analysisNavTable.
+  ///
+  /// In es, this message translates to:
+  /// **'Tabla'**
+  String get analysisNavTable;
+
+  /// No description provided for @analysisNavSave.
+  ///
+  /// In es, this message translates to:
+  /// **'Guardar'**
+  String get analysisNavSave;
+
+  /// No description provided for @analysisWireframesSection.
+  ///
+  /// In es, this message translates to:
+  /// **'Wireframes de deformación  ±2DE'**
+  String get analysisWireframesSection;
+
+  /// No description provided for @analysisNoComponents.
+  ///
+  /// In es, this message translates to:
+  /// **'No fue posible calcular componentes principales.'**
+  String get analysisNoComponents;
+
+  /// No description provided for @analysisScoresSection.
+  ///
+  /// In es, this message translates to:
+  /// **'Tabla de Scores'**
+  String get analysisScoresSection;
+
+  /// No description provided for @analysisInterpretationSection.
+  ///
+  /// In es, this message translates to:
+  /// **'Interpretación y guardado'**
+  String get analysisInterpretationSection;
+
+  /// No description provided for @analysisInterpretationHint.
+  ///
+  /// In es, this message translates to:
+  /// **'Ej.: PC1: apertura corolar; PC2: curvatura; PC3: variación basal...'**
+  String get analysisInterpretationHint;
+
+  /// No description provided for @analysisSaveWithInterpretation.
+  ///
+  /// In es, this message translates to:
+  /// **'Guardar con interpretación'**
+  String get analysisSaveWithInterpretation;
+
+  /// No description provided for @analysisWireframeMeanLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Media · {title}'**
+  String analysisWireframeMeanLabel(Object title);
+
+  /// No description provided for @analysisNoInterpretation.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin interpretación'**
+  String get analysisNoInterpretation;
+
+  /// No description provided for @analysisCsvHeaderImage.
+  ///
+  /// In es, this message translates to:
+  /// **'Imagen'**
+  String get analysisCsvHeaderImage;
+
+  /// No description provided for @analysisCsvHeaderInterpretation.
+  ///
+  /// In es, this message translates to:
+  /// **'Interpretación'**
+  String get analysisCsvHeaderInterpretation;
+
+  /// No description provided for @analysisExportedBoth.
+  ///
+  /// In es, this message translates to:
+  /// **'Exportados: {csvFile} y {jsonFile}'**
+  String analysisExportedBoth(Object csvFile, Object jsonFile);
+
+  /// No description provided for @analysisExportedSingle.
+  ///
+  /// In es, this message translates to:
+  /// **'Exportado: {csvFile}'**
+  String analysisExportedSingle(Object csvFile);
+
+  /// No description provided for @analysisShareSubject.
+  ///
+  /// In es, this message translates to:
+  /// **'Edge AI Morphometrics - análisis'**
+  String get analysisShareSubject;
+
+  /// No description provided for @analysisShareText.
+  ///
+  /// In es, this message translates to:
+  /// **'Archivos exportados desde Theia'**
+  String get analysisShareText;
+
+  /// No description provided for @analysisShareError.
+  ///
+  /// In es, this message translates to:
+  /// **'No se pudieron compartir los archivos: {error}'**
+  String analysisShareError(Object error);
+
+  /// No description provided for @analysisHcdaiNote.
+  ///
+  /// In es, this message translates to:
+  /// **'🧠 Nota HCDAI:\nLos wireframes muestran deformaciones hipotéticas ±2DE sobre la forma media.\nInterprétalas biológicamente (apertura, curvatura, simetría) comparando con especímenes reales.'**
+  String get analysisHcdaiNote;
+
+  /// No description provided for @morphTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Morfoespacio (PC1 vs PC2)'**
+  String get morphTitle;
+
+  /// No description provided for @morphClearSelectionTooltip.
+  ///
+  /// In es, this message translates to:
+  /// **'Limpiar selección'**
+  String get morphClearSelectionTooltip;
+
+  /// No description provided for @morphAxisLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'PC1 (Eje X)  /  PC2 (Eje Y)'**
+  String get morphAxisLabel;
+
+  /// No description provided for @specimenViewerMean.
+  ///
+  /// In es, this message translates to:
+  /// **'Media'**
+  String get specimenViewerMean;
+
+  /// No description provided for @specimenViewerSpecimen.
+  ///
+  /// In es, this message translates to:
+  /// **'Espécimen'**
+  String get specimenViewerSpecimen;
+
+  /// No description provided for @specimenViewerOverlay.
+  ///
+  /// In es, this message translates to:
+  /// **'Superpuestos'**
+  String get specimenViewerOverlay;
+
+  /// No description provided for @dmSelectFileFirst.
+  ///
+  /// In es, this message translates to:
+  /// **'Selecciona un archivo primero.'**
+  String get dmSelectFileFirst;
+
+  /// No description provided for @dmShareError.
+  ///
+  /// In es, this message translates to:
+  /// **'No se pudo compartir: {error}'**
+  String dmShareError(Object error);
+
+  /// No description provided for @dmAnalysisJsonNotFound.
+  ///
+  /// In es, this message translates to:
+  /// **'No se encontró el JSON del análisis para abrirlo.'**
+  String get dmAnalysisJsonNotFound;
+
+  /// No description provided for @dmOpenAnalysisError.
+  ///
+  /// In es, this message translates to:
+  /// **'No se pudo abrir el análisis: {error}'**
+  String dmOpenAnalysisError(Object error);
+
+  /// No description provided for @dmInvalidJsonFormat.
+  ///
+  /// In es, this message translates to:
+  /// **'Formato JSON inválido'**
+  String get dmInvalidJsonFormat;
+
+  /// No description provided for @dmExpectedJsonObject.
+  ///
+  /// In es, this message translates to:
+  /// **'Se esperaba un objeto JSON'**
+  String get dmExpectedJsonObject;
+
+  /// No description provided for @dmExpectedMatrixList.
+  ///
+  /// In es, this message translates to:
+  /// **'Se esperaba matriz en formato lista'**
+  String get dmExpectedMatrixList;
+
+  /// No description provided for @dmEmptyMatrix.
+  ///
+  /// In es, this message translates to:
+  /// **'Matriz vacía'**
+  String get dmEmptyMatrix;
+
+  /// No description provided for @dmExpectedMatricesList.
+  ///
+  /// In es, this message translates to:
+  /// **'Se esperaba lista de matrices'**
+  String get dmExpectedMatricesList;
 }
 
 class _AppLocalizationsDelegate
@@ -824,18 +1034,18 @@ class _AppLocalizationsDelegate
 
   @override
   bool isSupported(Locale locale) => <String>[
-    'ar',
-    'de',
-    'el',
-    'en',
-    'es',
-    'fr',
-    'it',
-    'pt',
-    'ru',
-    'tr',
-    'zh',
-  ].contains(locale.languageCode);
+        'ar',
+        'de',
+        'el',
+        'en',
+        'es',
+        'fr',
+        'it',
+        'pt',
+        'ru',
+        'tr',
+        'zh'
+      ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -869,9 +1079,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
   }
 
   throw FlutterError(
-    'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-    'an issue with the localizations generation tool. Please file an issue '
-    'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.',
-  );
+      'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+      'an issue with the localizations generation tool. Please file an issue '
+      'on GitHub with a reproducible sample app and the gen-l10n configuration '
+      'that was used.');
 }
