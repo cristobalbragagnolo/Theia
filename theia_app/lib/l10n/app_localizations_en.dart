@@ -313,7 +313,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get infoAcknowledgementsBody =>
-      'The deep learning algorithms in this app, much like science in general, are built upon the work of those who came before us. For this reason, I would like to thank Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares, and Andrés Ferreira Rodríguez for their annotation work and incredible support.\n\nThis app was created with love, curiosity, and a lot of hard work. Therefore, I want to express my gratitude to my parents and family for teaching me these values.\n\nI hope this tool proves useful for scientific research and helps those who come after us to discover and invent even better things.';
+      'The deep learning algorithms in this app, much like science in general, are built upon the work of those who came before us. For this reason, I would like to thank -, -, and - for their annotation work and incredible support.\n\nThis app was created with love, curiosity, and a lot of hard work. Therefore, I want to express my gratitude to my parents and family for teaching me these values.\n\nI hope this tool proves useful for scientific research and helps those who come after us to discover and invent even better things.';
 
   @override
   String get appTaglineShort => 'Edge AI Morphometrics';

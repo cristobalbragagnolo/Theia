@@ -7,7 +7,7 @@ class InfoScreen extends StatelessWidget {
   const InfoScreen({super.key});
 
   static final Uri _sourceUri =
-      Uri.parse('https://github.com/cristobalbragagnolo/Theia');
+      Uri.parse('https://github.com/-----/Theia');
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +110,7 @@ class InfoScreen extends StatelessWidget {
                     padding:
                         const EdgeInsets.symmetric(vertical: AppSpacing.xs),
                     child: Text(
-                      'https://github.com/cristobalbragagnolo/Theia',
+                      'https://github.com/-----/Theia',
                       style: textTheme.bodyMedium?.copyWith(
                         color: Theme.of(context).colorScheme.primary,
                         decoration: TextDecoration.underline,
@@ -125,7 +125,7 @@ class InfoScreen extends StatelessWidget {
           _ExpandableSectionCard(
             title: l.infoThanksSection,
             child: Text(
-              'The deep learning algorithms in this app, much like science in general, are built upon the work of those who came before us. For this reason, I would like to thank Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares, and Andrés Ferreira Rodríguez for their annotation work and incredible support.\n\nThis app was created with love, curiosity, and a lot of hard work. Therefore, I want to express my gratitude to my parents and family for teaching me these values.\n\nI hope this tool proves useful for scientific research and helps those who come after us to discover and invent even better things.\n\nCristobal Bragagnolo',
+              'The deep learning algorithms in this app, much like science in general, are built upon the work of those who came before us. For this reason, I would like to thank -, -, and - for their annotation work and incredible support.\n\nThis app was created with love, curiosity, and a lot of hard work. Therefore, I want to express my gratitude to my parents and family for teaching me these values.\n\nI hope this tool proves useful for scientific research and helps those who come after us to discover and invent even better things.\n\n-- ---',
               style: textTheme.bodyMedium?.copyWith(
                 fontSize: 16,
                 height: 1.35,

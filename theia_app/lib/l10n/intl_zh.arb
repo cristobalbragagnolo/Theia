@@ -272,7 +272,7 @@
   "dmExpectedMatrixList": "应为列表格式的矩阵",
   "dmEmptyMatrix": "空矩阵",
   "dmExpectedMatricesList": "应为矩阵列表",
-  "infoAcknowledgementsBody": "本应用中的深度学习算法与科学本身一样，建立在前人的工作之上。因此，我想感谢 Mohamed (Moha) Abdelaziz、A. Jesús Muñoz-Pajares 和 Andrés Ferreira Rodríguez 在标注工作中的贡献以及他们给予的巨大支持。\n\n这款应用凝聚了爱、好奇心和大量努力。因此，我也想感谢我的父母和家人，是他们教会了我这些价值。\n\n希望这个工具能对科学研究有所帮助，并帮助后来者发现并创造出更好的成果。",
+  "infoAcknowledgementsBody": "本应用中的深度学习算法与科学本身一样，建立在前人的工作之上。因此，我想感谢 -、- 和 - 在标注工作中的贡献以及他们给予的巨大支持。\n\n这款应用凝聚了爱、好奇心和大量努力。因此，我也想感谢我的父母和家人，是他们教会了我这些价值。\n\n希望这个工具能对科学研究有所帮助，并帮助后来者发现并创造出更好的成果。",
   "@analysisPcaError": {
     "placeholders": {
       "error": {}
