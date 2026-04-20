@@ -48,7 +48,6 @@ Due to repository size limits, heavy binaries are hosted in the **Releases** sec
 | :--- | :--- |
 | **`yolo_dataset.zip`** | `data/yolo_dataset/` |
 | **`pose_medium_fp32.tflite`** | `models_weights/` **&** `theia_app/assets/` **&** `theia_app/android/app/...` |
-| **`Theia_Release_v1.0.apk`** | (Ready-to-install Android application) |
 
 ---
 
