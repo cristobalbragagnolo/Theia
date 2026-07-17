@@ -51,6 +51,16 @@ Due to repository size limits, heavy binaries are hosted in the **Releases** sec
 
 ---
 
+## Revision Notes (MEE major revision)
+
+This revision addresses the reviewers' methodological requests:
+
+- **Held-out test set.** The YOLO dataset was re-split 70/15/15 by specimen (833 / 178 / 179; seed 42) and the detector and pose models were retrained on a local NVIDIA GeForce RTX 5080 GPU. On the held-out test set the detector reached mAP50-95 = 0.964 and the pose estimator reached mAP50-95 = 0.522.
+- **Leakage-corrected biological validation.** One validation population that overlapped the training data was identified and removed, leaving 268 genuinely held-out specimens for the biological validation.
+- **PCA component cap.** The on-device PCA now caps the number of extracted components at `min(k, N-1, D)`, so no spurious near-zero components are returned when the sample size is small (for example, two components when N = 3). See `theia_app/lib/analysis/morph_analysis.dart`.
+
+---
+
 ## Acknowledgements
 
 The deep learning algorithms in this application, much like science itself, are built upon the foundational work of those who came before us. The author extends their deepest gratitude to -, -, and - for their meticulous work in data annotation and their unwavering intellectual support. 

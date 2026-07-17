@@ -297,8 +297,14 @@ class MorphometricAnalysis {
     // 4) Covarianza (D x D) = Xc^T * Xc / (N-1)
     final cov = (Xc.transpose() * Xc) * (1.0 / (N - 1));
 
-    // 5) Eigen top-k (matriz simétrica)
-    final evd = _symmetricTopKEigen(cov, k: k, maxIter: 2000, tol: 1e-11);
+    // 5) Eigen top-k (matriz simétrica).
+    // Cap the number of extracted components to the mathematically valid
+    // maximum: a covariance built from N centered specimens has rank <=
+    // min(N-1, D), so at most (N-1) non-trivial principal components exist.
+    // Requesting more (e.g. k=5 with N=3, where only 2 non-zero PCs exist)
+    // would yield spurious near-zero components.
+    final int kEff = math.max(1, math.min(k, math.min(N - 1, D)));
+    final evd = _symmetricTopKEigen(cov, k: kEff, maxIter: 2000, tol: 1e-11);
     final eigenVectors = evd['vectors'] as Matrix; // D x k
     final eigenValues = evd['values'] as List<double>; // k
     final trace = _traceOf(cov);
