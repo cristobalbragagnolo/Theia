@@ -8,6 +8,10 @@ models_weights/
 *.onnx
 *.zip
 theia_app/build/
+theia_app/android/build/
 theia_app/.dart_tool/
 android/.gradle/
 .DS_Store
+Thumbs.db
+.Rhistory
+.vscode/
