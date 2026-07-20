@@ -927,7 +927,7 @@ class MainActivity : FlutterActivity(), SensorEventListener {
     companion object {
         private const val CHANNEL = "com.example.theia/tflite"
         private const val DETECTOR_MODEL_FILE = "detector_nano_fp32.tflite"
-        private const val POSE_MODEL_FILE = "pose_medium_fp32.tflite"
+        private const val POSE_MODEL_FILE = "pose_medium_lowaug_fp32.tflite"
 
         private const val MODEL_INPUT_PIXELS = 640
         private const val DETECTIONS = 8400
