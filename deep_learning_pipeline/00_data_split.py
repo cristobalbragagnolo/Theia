@@ -13,6 +13,11 @@ This script implements the split protocol described in the Methods:
   * The split is deterministic: images are sorted before a seeded shuffle, so the
     same seed reproduces the same split on any machine. A manifest of the split
     (split_manifest.csv) is written for auditability.
+  * The exact 179-image held-out test set behind the released weights and the
+    reported test metrics is recorded in heldout_test_manifest.txt. (That run
+    predates this deterministic ordering, so use the manifest to reproduce the
+    published test evaluation; use this script's deterministic split to re-train
+    from scratch.)
 
 For Stage 2, each detection box is cropped with a fixed padding ratio (0.15) and
 the 32 landmarks are re-expressed in crop-relative coordinates, matching the
@@ -76,7 +81,7 @@ def crop_and_relabel(img_path, label_path, out_img_dir, out_lbl_dir, pad=PADDING
     lines = [ln.strip() for ln in open(label_path) if ln.strip()]
     kept = 0
     for idx, ln in enumerate(lines):
-        cls, cx, cy, w, h, kpts = parse_pose_label_line(ln)
+        _, cx, cy, w, h, kpts = parse_pose_label_line(ln)
         bw, bh = w * W, h * H
         bx, by = cx * W, cy * H
         x1 = max(0, int(bx - bw / 2 - bw * pad))
