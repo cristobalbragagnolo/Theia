@@ -1,53 +1,63 @@
 # THEIA: Edge AI for Geometric Morphometrics in Ecology
 
-This repository contains the official codebase, deep learning pipeline, and biological validation scripts for the manuscript submitted to ***Methods in Ecology and Evolution* (MEE)**. 
+This repository contains the official codebase, deep learning pipeline, and biological validation scripts for the manuscript submitted to ***Methods in Ecology and Evolution* (MEE)**.
 
-Theia is an on-device, open-source Edge AI mobile application designed to allow high-throughput geometric morphometrics in the field, eliminating the need for internet connectivity, cloud computing, or manual landmark digitization.
+Theia is an on-device, open-source Edge AI mobile application that brings high-throughput geometric morphometrics into the field. It runs fully offline — with no internet connection or cloud computing — and automates landmark placement while retaining an on-device human-in-the-loop review. Theia is intended to complement, not replace, established landmark-based morphometric workflows, extending them to field settings where portability and rapid on-device feedback are valuable.
 
 ---
 
 ## Repository Structure
 
-To ensure frictionless reproducibility, the project is strictly modularized into four domains:
+The project is modularized into four domains:
 
-* **`data/`**: Contains validation datasets and morphological analysis arrays.
-* **`deep_learning_pipeline/`**: The complete AI training and export workflow.
-* **`validation_scripts/`**: Jupyter notebooks for mathematical and biological validation.
-* **`theia_app/`**: The complete Flutter/Dart source code for the Android application.
+* **`data/`**: Held-out validation images and their manual `tps` ground truth (`validation_datates/`), the morphometric array used for the algorithmic-fidelity test (`morph_analysis_data/`), and the target folder for the training dataset (`yolo_dataset/`, fetched from the archive below).
+* **`deep_learning_pipeline/`**: The dataset split, training, and TFLite export workflow (`00` → `02`).
+* **`validation_scripts/`**: The algorithmic and biological validation, plus the reviewer-requested accuracy and robustness tests (`01` → `05`).
+* **`theia_app/`**: The complete Flutter/Dart and native Android source code for the mobile application.
 
 ---
 
 ## Reproducibility Guide
 
-### Phase 1: Deep Learning Pipeline
-1. Download `yolo_dataset.zip` from the **Releases** tab and extract its content into `data/yolo_dataset/`.
-2. If training on the cloud, upload the extracted folder to your Google Drive.
-3. Open `deep_learning_pipeline/00_yolo_cloud_training.ipynb` in Google Colab to train the models.
-4. Execute `01_export_tflite_edge.py` locally to generate the TFLite models.
+### Phase 1: Deep Learning Pipeline (`deep_learning_pipeline/`)
 
-### Phase 2: Biological & Algorithmic Validation
-1. Run `validation_scripts/01_algorithmic_fidelity.ipynb` to verify engine correlation ($|r| > 0.999$).
-2. Run `validation_scripts/02_model_biological_validation.ipynb` to reproduce the Procrustes ANOVA and morphospace fidelity tests.
+1. Download `yolo_dataset.zip` from the **Releases** tab and extract it into `data/yolo_dataset/`.
+2. **`00_data_split.py`** — build the deterministic 70/15/15 by-specimen split (833 / 178 / 179; seed 42). It writes `split_manifest.csv`; the exact held-out test set is also pinned in `heldout_test_manifest.txt`.
+3. **`01_train.py`** — train the Stage-1 detector and the Stage-2 pose/landmark model, and evaluate on the held-out test set (detector mAP50-95 = 0.964; pose mAP50-95 = 0.522).
+4. **`02_export_tflite.py`** — export the trained `.pt` weights to FP32 TFLite (two-step conversion) for on-device inference.
+
+### Phase 2: Algorithmic and Biological Validation (`validation_scripts/`)
+
+Run in order. The notebooks keep their executed outputs; the `.py` scripts write their result artifacts (CSV / Markdown / figures) alongside themselves.
+
+1. **`01_algorithmic_fidelity.ipynb`** — the on-device analysis engine versus R/`geomorph` on the same landmark matrix (N = 157; $|r| > 0.999$).
+2. **`02_infer_tflite.py`** — run the app's shipped TFLite models over the 268 held-out specimens through the exact on-device decode (`theia_tflite_engine.py`), writing the model's raw predictions to `predictions/`.
+3. **`03_biological_validation.ipynb`** — Procrustes ANOVA and morphospace fidelity of the on-device predictions versus manual landmarks on 268 genuinely held-out specimens (Method factor 15.1 % of variance; signal-to-bias 5.18 : 1).
+4. **`04_landmark_accuracy_test.py`** — per-landmark pixel RMSE on the 179 image-registered held-out test crops (mean 18.6 px).
+5. **`05_detector_quality_control.py`** — Stage-1 detector confidence under graded perspective, blur, and occlusion degradation (accept threshold 0.40).
 
 ### Phase 3: Theia Edge Application (Mobile Deployment)
-Theia requires specific binary placement for both the analytical pipeline and the mobile build:
-1. **Download Weights:** Get `pose_medium_fp32.tflite` from the **Releases** tab.
-2. **File Placement:** To ensure the app and scripts function correctly, place the file in:
-   * `models_weights/` (for local validation scripts)
-   * `theia_app/assets/` (for Flutter framework access)
-   * `theia_app/android/app/src/main/assets/` (for native Android TFLite initialization)
-3. **Build:** Navigate to `theia_app/`, run `flutter pub get` and execute `flutter run --release`.
+
+1. **Download the TFLite models** (`detector_nano_fp32.tflite`, `pose_medium_lowaug_fp32.tflite`) from the **Releases** tab.
+2. **Place them** in each location that reads them:
+   * `models_weights/` (local validation scripts)
+   * `theia_app/assets/` (Flutter framework access)
+   * `theia_app/android/app/src/main/assets/` (native Android TFLite initialization)
+3. **Build:** from `theia_app/`, run `flutter pub get`, then `flutter run --release` on a connected Android device.
 
 ---
 
-## Data and Weights Availability
+## Data and Model Availability
 
-Due to repository size limits, heavy binaries are hosted in the **Releases** section. After downloading, please follow this mapping:
+The heavy binaries (model weights and the training dataset) are attached to the repository's **Releases** rather than committed to git. The held-out validation images and their manual `tps` ground truth ship in this repository under `data/validation_datates/`; the biological-validation predictions are regenerated by `validation_scripts/02_infer_tflite.py`.
 
-| Downloadable File | Target Destination Path |
-| :--- | :--- |
-| **`yolo_dataset.zip`** | `data/yolo_dataset/` |
-| **`pose_medium_fp32.tflite`** | `models_weights/` **&** `theia_app/assets/` **&** `theia_app/android/app/...` |
+After downloading from the **Releases** tab, place each asset as follows:
+
+| Release asset | Description | Destination |
+| :--- | :--- | :--- |
+| **`yolo_dataset.zip`** | Annotated training / validation / test image pool (833 / 178 / 179, split by specimen) | `data/yolo_dataset/` |
+| **`det_baseline_best.pt`**, **`pose_lowaug_best.pt`** | Retrained YOLO weights, PyTorch (`pose_baseline_best.pt` is the augmentation-ablation variant) | `models_weights/` |
+| **`detector_nano_fp32.tflite`**, **`pose_medium_lowaug_fp32.tflite`** | On-device TFLite models (canonical) | `models_weights/`, `theia_app/assets/`, `theia_app/android/app/src/main/assets/` |
 
 ---
 
@@ -57,6 +67,7 @@ This revision addresses the reviewers' methodological requests:
 
 - **Held-out test set.** The YOLO dataset was re-split 70/15/15 by specimen (833 / 178 / 179; seed 42) and the detector and pose models were retrained on a local NVIDIA GeForce RTX 5080 GPU. On the held-out test set the detector reached mAP50-95 = 0.964 and the pose estimator reached mAP50-95 = 0.522.
 - **Leakage-corrected biological validation.** One validation population that overlapped the training data was identified and removed, leaving 268 genuinely held-out specimens for the biological validation.
+- **Per-landmark and robustness tests.** Per-landmark pixel RMSE is reported on the 179 image-registered held-out test crops (`04_landmark_accuracy_test.py`), and the Stage-1 detector's confidence is characterised under graded image-quality degradation (`05_detector_quality_control.py`).
 - **PCA component cap.** The on-device PCA now caps the number of extracted components at `min(k, N-1, D)`, so no spurious near-zero components are returned when the sample size is small (for example, two components when N = 3). See `theia_app/lib/analysis/morph_analysis.dart`.
 
 ---
