@@ -74,7 +74,7 @@ This revision addresses the reviewers' methodological requests:
 
 ## Acknowledgements
 
-The deep learning algorithms in this application, much like science itself, are built upon the foundational work of those who came before us. The author extends their deepest gratitude to -, -, and - for their meticulous work in data annotation and their unwavering intellectual support. 
+The deep learning algorithms in this application, much like science itself, are built upon the foundational work of those who came before us. The author extends their deepest gratitude to Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares, and Andrés Ferreira Rodríguez for their meticulous work in data annotation and their unwavering intellectual support. 
 
 I also wish to thank my parents and family for instilling in me the values of curiosity, dedication, and hard work that made this project possible. It is our hope that this tool will serve the scientific community and empower future researchers to discover and build even greater solutions.
 

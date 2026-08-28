@@ -313,7 +313,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get infoAcknowledgementsBody =>
-      'Bu uygulamadaki derin öğrenme algoritmaları, genel olarak bilimde olduğu gibi, bizden önce gelenlerin çalışmalarının üzerine kuruludur. Bu nedenle -’e, -’e ve -’e etiketleme çalışmaları ve inanılmaz destekleri için teşekkür etmek istiyorum.\n\nBu uygulama sevgi, merak ve çok emekle oluşturuldu. Bu nedenle bu değerleri bana öğreten aileme ve ebeveynlerime teşekkür etmek istiyorum.\n\nBu aracın bilimsel araştırmalar için faydalı olmasını ve bizden sonra gelenlerin daha da iyi şeyler keşfetmesine ve icat etmesine yardımcı olmasını umuyorum.';
+      'Bu uygulamadaki derin öğrenme algoritmaları, genel olarak bilim gibi, bizden öncekilerin emeği üzerine kuruludur. Bu yüzden Mohamed (Moha) Abdelaziz, A. Jesús Muñoz-Pajares ve Andrés Ferreira Rodríguez\'e anotasyon çalışmaları ve büyük destekleri için teşekkür etmek istiyorum.\n\nBu uygulama sevgi, merak ve çok emekle yapıldı. Bu değerleri bana kazandıran anne babama ve aileme teşekkür ederim.\n\nUmarım bu araç bilimsel araştırmalara katkı sağlar ve bizden sonra geleceklerin daha da iyi şeyler keşfedip icat etmesine yardımcı olur.';
 
   @override
   String get appTaglineShort => 'Edge AI Morphometrics';
